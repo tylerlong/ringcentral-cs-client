@@ -5,6 +5,13 @@ RingCentral C# client.
 This is just a proof of concept release, please don't use it in production (yet)!
 
 
+## Authorization management
+
+Token is refreshed automatically by background timer, the same as how we keep PubNub subscription alive.
+
+I made this change because I don't think we should refresh RingCentral token and PubNub subscription differently.
+
+
 ## URL Builder
 
 ```cs
