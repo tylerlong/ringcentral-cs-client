@@ -29,6 +29,18 @@ Or you can specify all of the IDs explicitly:
 rc.Restapi("v1.0").Account("~").Extension("12345678").CallLog("87654321").Endpoint(); // "/restapi/v1.0/account/~/extension/12345678/call-log/87654321"
 ```
 
+Let's compare it with the traditional solution:
+
+```cs
+var apiVersion = "v1.0";
+var accountId = "~";
+var extensionId = "12345678";
+var callLogId = "87654321";
+var endpoint = "/restapi" + apiVersion + "/account" + accountId + "/extension" + extensionId + "/call-log" + callLogId;
+```
+
+Too many hard-coded strings, too much string concatenation. It is prone to make typos and hard to read/maintain.
+
 
 ## Http Request sample
 
@@ -53,7 +65,7 @@ Following code snippets are equivalent:
 var endpoint = "/restapi/v1.0/dictionary/timezone/6"; // hard code string
 var response = rc.Get(endpoint).Result; // make http request
 var json = response.Content.ReadAsStringAsync().Result; // get response json
-var timezone = JsonConvert.DeserializeObject<Timezone>(); // convert json to model
+var timezone = JsonConvert.DeserializeObject<Timezone>(json); // convert json to model
 ```
 
 ##### URL Builder + generics programming:
