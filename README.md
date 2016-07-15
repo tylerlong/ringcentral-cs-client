@@ -40,7 +40,7 @@ This is **not** ready yet. But you can get the idea:
 
 Following code snippets are equivalent:
 
-##### traditional solution:
+##### Traditional solution:
 
 ```cs
 var endpoint = "/restapi/v1.0/dictionary/timezone/6"; // hard code string
