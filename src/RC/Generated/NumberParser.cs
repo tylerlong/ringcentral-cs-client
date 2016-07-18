@@ -2,7 +2,8 @@ namespace RingCentral
 {
     public partial class NumberParser : Model
     {
-        internal NumberParser(Model parent, string _id = null) : base(parent, _id) { }
+        internal NumberParser(Model parent) : base(parent, null) { }
+
 
         protected override string PathSegment
         {
@@ -12,11 +13,12 @@ namespace RingCentral
             }
         }
 
-        
-        public Parse Parse(string _id = null)
+        public Parse Parse()
         {
-            return new Parse(this, _id);
+            return new Parse(this);
         }
         
+
+
     }
 }

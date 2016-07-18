@@ -2,7 +2,8 @@ namespace RingCentral
 {
     public partial class ClientInfo : Model
     {
-        internal ClientInfo(Model parent, string _id = null) : base(parent, _id) { }
+        internal ClientInfo(Model parent) : base(parent, null) { }
+
 
         protected override string PathSegment
         {
@@ -12,11 +13,12 @@ namespace RingCentral
             }
         }
 
-        
         public CustomData CustomData(string _id = null)
         {
             return new CustomData(this, _id);
         }
         
+
+
     }
 }

@@ -2,16 +2,16 @@ using System.Threading.Tasks;
 
 namespace RingCentral
 {
-    public partial class ServiceInfo : Model
+    public partial class End : Model
     {
-        internal ServiceInfo(Model parent) : base(parent, null) { }
+        internal End(Model parent) : base(parent, null) { }
 
 
         protected override string PathSegment
         {
             get
             {
-                return "service-info";
+                return "end";
             }
         }
 

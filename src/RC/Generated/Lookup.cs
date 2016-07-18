@@ -1,8 +1,11 @@
+using System.Threading.Tasks;
+
 namespace RingCentral
 {
     public partial class Lookup : Model
     {
-        internal Lookup(Model parent, string _id = null) : base(parent, _id) { }
+        internal Lookup(Model parent) : base(parent, null) { }
+
 
         protected override string PathSegment
         {
@@ -12,6 +15,6 @@ namespace RingCentral
             }
         }
 
-        
+
     }
 }

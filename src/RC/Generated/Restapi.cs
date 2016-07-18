@@ -1,8 +1,11 @@
+using System.Threading.Tasks;
+
 namespace RingCentral
 {
     public partial class Restapi : Model
     {
         internal Restapi(Model parent, string _id = null) : base(parent, _id) { }
+
 
         protected override string PathSegment
         {
@@ -12,41 +15,82 @@ namespace RingCentral
             }
         }
 
-        
-        public Oauth Oauth(string _id = null)
+        public Oauth Oauth()
         {
-            return new Oauth(this, _id);
+            return new Oauth(this);
         }
         
+
         public Account Account(string _id = "~")
         {
             return new Account(this, _id);
         }
         
-        public ClientInfo ClientInfo(string _id = null)
+
+        public ClientInfo ClientInfo()
         {
-            return new ClientInfo(this, _id);
+            return new ClientInfo(this);
         }
         
-        public Dictionary Dictionary(string _id = null)
+
+        public Dictionary Dictionary()
         {
-            return new Dictionary(this, _id);
+            return new Dictionary(this);
         }
         
-        public NumberParser NumberParser(string _id = null)
+
+        public NumberParser NumberParser()
         {
-            return new NumberParser(this, _id);
+            return new NumberParser(this);
         }
         
-        public NumberPool NumberPool(string _id = null)
+
+        public NumberPool NumberPool()
         {
-            return new NumberPool(this, _id);
+            return new NumberPool(this);
         }
         
+
         public Subscription Subscription(string _id = null)
         {
             return new Subscription(this, _id);
         }
         
+
+
+        public Task<ListResponse> List()
+        {
+            return RC.Get<ListResponse>(Endpoint(false), null);
+        }
+        public class ListResponse
+        {
+            public string uri;
+            public ApiVersion[] apiVersions;
+            public string serverVersion;
+            public string serverRevision;
+        
+            public class ApiVersion
+            {
+                public string uri;
+                public string versionString;
+                public string releaseDate;
+                public string uriString;
+            }
+        }
+        
+
+        public Task<GetResponse> Get()
+        {
+            return RC.Get<GetResponse>(Endpoint(true), null);
+        }
+        public class GetResponse
+        {
+            public string uri;
+            public string versionString;
+            public string releaseDate;
+            public string uriString;
+        }
+        
+
     }
 }

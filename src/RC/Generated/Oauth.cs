@@ -2,7 +2,8 @@ namespace RingCentral
 {
     public partial class Oauth : Model
     {
-        internal Oauth(Model parent, string _id = null) : base(parent, _id) { }
+        internal Oauth(Model parent) : base(parent, null) { }
+
 
         protected override string PathSegment
         {
@@ -12,21 +13,24 @@ namespace RingCentral
             }
         }
 
-        
-        public Authorize Authorize(string _id = null)
+        public Authorize Authorize()
         {
-            return new Authorize(this, _id);
+            return new Authorize(this);
         }
         
-        public Revoke Revoke(string _id = null)
+
+        public Revoke Revoke()
         {
-            return new Revoke(this, _id);
+            return new Revoke(this);
         }
         
-        public Token Token(string _id = null)
+
+        public Token Token()
         {
-            return new Token(this, _id);
+            return new Token(this);
         }
         
+
+
     }
 }

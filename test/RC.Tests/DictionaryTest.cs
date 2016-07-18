@@ -1,4 +1,5 @@
 using System.Net;
+using System.Reflection;
 using Xunit;
 
 namespace RingCentral.Test
@@ -32,6 +33,18 @@ namespace RingCentral.Test
             Assert.NotNull(response);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Contains("China", response.Content.ReadAsStringAsync().Result);
+        }
+
+        [Fact]
+        public void TestParameters()
+        {
+            var methodInfo = rc.Restapi().GetType().GetMethod("Dictionary");
+            var parameters = methodInfo.GetParameters();
+            Assert.Equal(0, parameters.Length);
+
+            methodInfo = rc.Restapi().Dictionary().GetType().GetMethod("Timezone");
+            parameters = methodInfo.GetParameters();
+            Assert.Equal(1, parameters.Length);
         }
     }
 }

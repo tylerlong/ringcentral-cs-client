@@ -2,7 +2,8 @@ namespace RingCentral
 {
     public partial class NumberPool : Model
     {
-        internal NumberPool(Model parent, string _id = null) : base(parent, _id) { }
+        internal NumberPool(Model parent) : base(parent, null) { }
+
 
         protected override string PathSegment
         {
@@ -12,16 +13,18 @@ namespace RingCentral
             }
         }
 
-        
-        public Lookup Lookup(string _id = null)
+        public Lookup Lookup()
         {
-            return new Lookup(this, _id);
+            return new Lookup(this);
         }
         
-        public Reserve Reserve(string _id = null)
+
+        public Reserve Reserve()
         {
-            return new Reserve(this, _id);
+            return new Reserve(this);
         }
         
+
+
     }
 }

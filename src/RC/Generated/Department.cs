@@ -4,6 +4,7 @@ namespace RingCentral
     {
         internal Department(Model parent, string _id = null) : base(parent, _id) { }
 
+
         protected override string PathSegment
         {
             get
@@ -12,11 +13,12 @@ namespace RingCentral
             }
         }
 
-        
-        public Members Members(string _id = null)
+        public Members Members()
         {
-            return new Members(this, _id);
+            return new Members(this);
         }
         
+
+
     }
 }
