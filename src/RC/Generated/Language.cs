@@ -39,10 +39,30 @@ namespace RingCentral
         
             public class Navigation
             {
-                public string firstPage;
-                public string nextPage;
-                public string previousPage;
-                public string lastPage;
+                public FirstPage firstPage;
+                public NextPage nextPage;
+                public PreviousPage previousPage;
+                public LastPage lastPage;
+        
+                public class FirstPage
+                {
+                    public string uri;
+                }
+        
+                public class NextPage
+                {
+                    public string uri;
+                }
+        
+                public class PreviousPage
+                {
+                    public string uri;
+                }
+        
+                public class LastPage
+                {
+                    public string uri;
+                }
             }
         
             public class Paging

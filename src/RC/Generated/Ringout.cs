@@ -63,9 +63,9 @@ namespace RingCentral
         }
         
 
-        public void Delete()
+        public Task<System.Net.Http.HttpResponseMessage> Delete()
         {
-            RC.Delete(Endpoint(true), null);
+            return RC.Delete(Endpoint(true), null);
         }
         
         

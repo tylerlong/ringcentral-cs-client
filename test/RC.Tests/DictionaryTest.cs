@@ -33,6 +33,10 @@ namespace RingCentral.Test
             Assert.NotNull(response);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Contains("China", response.Content.ReadAsStringAsync().Result);
+
+            var countryResponse = rc.Get<Country.GetResponse>(country.Endpoint()).Result;
+            var countryResponse2 = rc.Restapi().Dictionary().Country("46").Get().Result;
+            TestUtil.DeepEqual(countryResponse2, countryResponse);
         }
 
         [Fact]

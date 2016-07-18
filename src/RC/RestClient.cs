@@ -61,8 +61,13 @@ namespace RingCentral
         {
             var url = new Url(server).AppendPathSegment("/restapi/oauth/token");
             var client = url.WithBasicAuth(appKey, appSecret);
-            var requestBody = new { username = username, extension = extension,
-                password = password, grant_type = "password" };
+            var requestBody = new
+            {
+                username = username,
+                extension = extension,
+                password = password,
+                grant_type = "password"
+            };
             token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
         }
 
@@ -77,8 +82,12 @@ namespace RingCentral
             }
             var url = new Url(server).AppendPathSegment("/restapi/oauth/token");
             var client = url.WithBasicAuth(appKey, appSecret);
-            var requestBody = new { grant_type = "refresh_token", refresh_token = token.refresh_token,
-                endpoint_id = token.endpoint_id };
+            var requestBody = new
+            {
+                grant_type = "refresh_token",
+                refresh_token = token.refresh_token,
+                endpoint_id = token.endpoint_id
+            };
             token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
         }
 
@@ -109,8 +118,12 @@ namespace RingCentral
         {
             var url = new Url(server).AppendPathSegment("/restapi/oauth/token");
             var client = url.WithBasicAuth(appKey, appSecret);
-            var requestBody = new { grant_type = "authorization_code", redirect_uri = redirectUri,
-                code = authCode };
+            var requestBody = new
+            {
+                grant_type = "authorization_code",
+                redirect_uri = redirectUri,
+                code = authCode
+            };
             token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
         }
 
