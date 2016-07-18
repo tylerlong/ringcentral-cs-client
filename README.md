@@ -42,12 +42,29 @@ var endpoint = "/restapi" + apiVersion + "/account" + accountId + "/extension" +
 Too many hard-coded strings, too much string concatenation. It is prone to make typos and hard to read/maintain.
 
 
+## Async by default
+
+Http requests are async by default:
+
+```cs
+var response = await rc.Get(endpoint);
+var country = await rc.Restapi().Dictionary().Country("46").Get();
+```
+
+And you can change them to sync easily:
+
+```cs
+var response = rc.Get(endpoint).Result;
+var country = rc.Restapi().Dictionary().Country("46").Get().Result;
+```
+
+
 ## Http Request sample
 
 Get extension list:
 
 ```cs
-var rc = new RestClient("appKey", "appSecret", "apiServer");
+var rc = new RestClient("appKey", "appSecret");
 var endpoint = rc.Restapi().Account().Extension().Endpoint(); // /restapi/v1.0/account/~/extension/~
 var response = rc.Get(endpoint).Result;
 var json = response.Content.ReadAsStringAsync().Result;
@@ -55,7 +72,7 @@ var json = response.Content.ReadAsStringAsync().Result;
 
 ## Models
 
-This is **not** ready yet. But you can get the idea:
+This is **almost** ready. Some rare cases are not working yet.
 
 Following code snippets are equivalent:
 
@@ -65,18 +82,18 @@ Following code snippets are equivalent:
 var endpoint = "/restapi/v1.0/dictionary/timezone/6"; // hard code string
 var response = rc.Get(endpoint).Result; // make http request
 var json = response.Content.ReadAsStringAsync().Result; // get response json
-var timezone = JsonConvert.DeserializeObject<Timezone>(json); // convert json to model
+var timezone = JsonConvert.DeserializeObject<Timezone.GetResponse>(json); // convert json to model
 ```
 
 ##### URL Builder + generics programming:
 
 ```cs
-var endpoint = rc.Restapi().Dictionary().Timezone(6).Endpoint();
-var timezone = rc.Get<Timezone>(endpoint);
+var endpoint = rc.Restapi().Dictionary().Timezone("6").Endpoint();
+var timezone = rc.Get<Timezone.GetResponse>(endpoint);
 ```
 
 ##### Most intuitive:
 
 ```cs
-var timezone = rc.Restapi().Dictionary().Timezone(6).Get(); // This is the shortest solution.
+var timezone = rc.Restapi().Dictionary().Timezone("6").Get(); // This is the shortest solution.
 ```
