@@ -22,16 +22,16 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public string response_type;
-            public string client_id;
-            public string redirect_uri;
-            public string state;
+            public string response_type { get; set; }
+            public string client_id { get; set; }
+            public string redirect_uri { get; set; }
+            public string state { get; set; }
         }
         public class PostResponse
         {
-            public string code;
-            public int? expires_in;
-            public string state;
+            public string code { get; set; }
+            public int? expires_in { get; set; }
+            public string state { get; set; }
         }
         
 

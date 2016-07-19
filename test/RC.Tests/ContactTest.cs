@@ -1,4 +1,5 @@
 using Xunit;
+using System.Threading;
 
 namespace RingCentral.Test
 {
@@ -37,10 +38,29 @@ namespace RingCentral.Test
             list = addressBook.Contact().List().Result;
             Assert.Equal(total + 1, list.paging.totalElements);
 
+            Thread.Sleep(5000); // avoid 429
+
             // search
             list = addressBook.Contact().List(new Contact.ListQueryParams { phoneNumber = phoneNumber }).Result;
             Assert.Equal(1, list.paging.totalElements);
             var contactId = list.records[0].id;
+
+            // update
+            var contact2 = addressBook.Contact(contactId.ToString()).Put(new Contact.PutRequest{
+                firstName = "Tyler",
+                lastName = "Liu",
+                homePhone = phoneNumber
+            }).Result;
+            Assert.NotNull(contact2);
+            Assert.Equal("Liu", contact2.lastName);
+
+            // get
+            var contact3 = addressBook.Contact(contactId.ToString()).Get().Result;
+            Assert.NotNull(contact3);
+            Assert.Equal("Tyler", contact3.firstName);
+            Assert.Equal("Liu", contact3.lastName);
+
+            Thread.Sleep(5000); // avoid 429
 
             // delete
             var response = addressBook.Contact(contactId.ToString()).Delete().Result;

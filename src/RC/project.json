@@ -5,8 +5,8 @@
     "emitEntryPoint": false
   },
   "dependencies": {
-    "Flurl": "2.0.0",
-    "Flurl.Http": "0.10.1"
+    "Flurl": "2.1.0",
+    "Flurl.Http": "1.0.0"
   },
   "frameworks": {
     "netcoreapp1.0": {

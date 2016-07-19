@@ -17,35 +17,34 @@
           "lib/netcoreapp1.0/dotnet-test-xunit.dll": {}
         }
       },
-      "Flurl/2.0.0": {
+      "Flurl/2.1.0": {
         "type": "package",
         "dependencies": {
-          "System.Linq": "4.0.0",
-          "System.Reflection.TypeExtensions": "4.0.0"
+          "System.Globalization.Calendars": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Reflection.TypeExtensions": "4.1.0"
         },
         "compile": {
-          "lib/dotnet5.4/Flurl.dll": {}
+          "lib/netstandard1.4/Flurl.dll": {}
         },
         "runtime": {
-          "lib/dotnet5.4/Flurl.dll": {}
+          "lib/netstandard1.4/Flurl.dll": {}
         }
       },
-      "Flurl.Http/0.10.1": {
+      "Flurl.Http/1.0.0": {
         "type": "package",
         "dependencies": {
-          "Flurl": "2.0.0",
-          "Newtonsoft.Json": "8.0.3",
-          "System.Dynamic.Runtime": "4.0.10",
-          "System.IO.FileSystem": "4.0.0",
-          "System.Net.Http": "4.0.0",
-          "System.Text.RegularExpressions": "4.0.10",
-          "System.Threading": "4.0.10"
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Net.Http": "4.1.0",
+          "System.Text.Encoding.CodePages": "4.0.1"
         },
         "compile": {
-          "lib/dotnet5.4/Flurl.Http.dll": {}
+          "lib/netstandard1.4/Flurl.Http.dll": {}
         },
         "runtime": {
-          "lib/dotnet5.4/Flurl.Http.dll": {}
+          "lib/netstandard1.4/Flurl.Http.dll": {}
         }
       },
       "Libuv/1.9.0": {
@@ -2128,7 +2127,7 @@
           "System.Threading": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Text.Encoding.CodePages.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
@@ -2515,8 +2514,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Flurl": "2.0.0",
-          "Flurl.Http": "0.10.1",
+          "Flurl": "2.1.0",
+          "Flurl.Http": "1.0.0",
           "Microsoft.NETCore.App": "1.0.0"
         }
       }
@@ -2538,38 +2537,73 @@
         "runtimes/win7-x86/lib/net451/dotnet-test-xunit.exe"
       ]
     },
-    "Flurl/2.0.0": {
-      "sha512": "7yvoh2arCioXljalQR87DccyFMFRGOfKOv0TI8jKNHUJ6K/fkfFPKH0k5AvFqtT3wgorV3Ks8mF/3pj0KwSttg==",
+    "Flurl/2.1.0": {
+      "sha512": "n8Y4eOJcqDWIyLsPsF+qGILQlFZcvJoXuAXgAKx3zyEWvMKPGd4xXpi2wI6H/x8lNRWpCx3nzRnPXYDaJqhgqg==",
       "type": "package",
-      "path": "Flurl/2.0.0",
+      "path": "Flurl/2.1.0",
       "files": [
-        "Flurl.2.0.0.nupkg.sha512",
+        "Flurl.2.1.0.nupkg.sha512",
         "Flurl.nuspec",
-        "lib/dotnet5.4/Flurl.dll",
-        "lib/dotnet5.4/Flurl.pdb",
-        "lib/dotnet5.4/Flurl.xml",
-        "lib/portable-net40+win+wpa81+wp80+MonoAndroid10+MonoTouch10/Flurl.XML",
-        "lib/portable-net40+win+wpa81+wp80+MonoAndroid10+MonoTouch10/Flurl.dll",
-        "lib/portable-net40+win+wpa81+wp80+MonoAndroid10+MonoTouch10/Flurl.pdb"
+        "lib/monoandroid/Flurl.deps.json",
+        "lib/monoandroid/Flurl.dll",
+        "lib/monoandroid/Flurl.pdb",
+        "lib/monoandroid/Flurl.xml",
+        "lib/monotouch/Flurl.deps.json",
+        "lib/monotouch/Flurl.dll",
+        "lib/monotouch/Flurl.pdb",
+        "lib/monotouch/Flurl.xml",
+        "lib/netstandard1.4/Flurl.deps.json",
+        "lib/netstandard1.4/Flurl.dll",
+        "lib/netstandard1.4/Flurl.pdb",
+        "lib/netstandard1.4/Flurl.xml",
+        "lib/portable40-net40+win8+wpa81/Flurl.deps.json",
+        "lib/portable40-net40+win8+wpa81/Flurl.dll",
+        "lib/portable40-net40+win8+wpa81/Flurl.pdb",
+        "lib/portable40-net40+win8+wpa81/Flurl.xml",
+        "lib/xamarin.ios/Flurl.deps.json",
+        "lib/xamarin.ios/Flurl.dll",
+        "lib/xamarin.ios/Flurl.pdb",
+        "lib/xamarin.ios/Flurl.xml",
+        "lib/xamarin.mac/Flurl.deps.json",
+        "lib/xamarin.mac/Flurl.dll",
+        "lib/xamarin.mac/Flurl.pdb",
+        "lib/xamarin.mac/Flurl.xml"
       ]
     },
-    "Flurl.Http/0.10.1": {
-      "sha512": "0sseBEGo7wy7f3n5BOz9fmh9f+GqYbTIc2SpYcFWmCCnQjFkOUrOU5kD/BjKpCV86vuv8z2eRSV8MUm5gNSpag==",
+    "Flurl.Http/1.0.0": {
+      "sha512": "E9h2wQtXgBEuRAFAzaO724PaLw4YcDAhNcmWKdKPpzUlSf42oPcCQAsZovuKXPiHp9hZ111aN4FuhyW32kWW6w==",
       "type": "package",
-      "path": "Flurl.Http/0.10.1",
+      "path": "Flurl.Http/1.0.0",
       "files": [
-        "Flurl.Http.0.10.1.nupkg.sha512",
+        "Flurl.Http.1.0.0.nupkg.sha512",
         "Flurl.Http.nuspec",
-        "lib/dotnet5.4/Flurl.Http.dll",
-        "lib/dotnet5.4/Flurl.Http.pdb",
-        "lib/dotnet5.4/Flurl.Http.xml",
-        "lib/net45/Flurl.Http.XML",
+        "lib/monoandroid/Flurl.Http.deps.json",
+        "lib/monoandroid/Flurl.Http.dll",
+        "lib/monoandroid/Flurl.Http.pdb",
+        "lib/monoandroid/Flurl.Http.xml",
+        "lib/monotouch/Flurl.Http.deps.json",
+        "lib/monotouch/Flurl.Http.dll",
+        "lib/monotouch/Flurl.Http.pdb",
+        "lib/monotouch/Flurl.Http.xml",
         "lib/net45/Flurl.Http.dll",
         "lib/net45/Flurl.Http.pdb",
-        "lib/portable-net45+win+wpa81+wp80/Flurl.Http.dll",
-        "lib/portable-net45+win+wpa81+wp80/Flurl.Http.dll.config",
-        "lib/portable-net45+win+wpa81+wp80/Flurl.Http.pdb",
-        "lib/portable-net45+win+wpa81+wp80/Flurl.Http.xml"
+        "lib/net45/Flurl.Http.xml",
+        "lib/netstandard1.4/Flurl.Http.deps.json",
+        "lib/netstandard1.4/Flurl.Http.dll",
+        "lib/netstandard1.4/Flurl.Http.pdb",
+        "lib/netstandard1.4/Flurl.Http.xml",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.deps.json",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.dll",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.pdb",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.xml",
+        "lib/xamarin.ios/Flurl.Http.deps.json",
+        "lib/xamarin.ios/Flurl.Http.dll",
+        "lib/xamarin.ios/Flurl.Http.pdb",
+        "lib/xamarin.ios/Flurl.Http.xml",
+        "lib/xamarin.mac/Flurl.Http.deps.json",
+        "lib/xamarin.mac/Flurl.Http.dll",
+        "lib/xamarin.mac/Flurl.Http.pdb",
+        "lib/xamarin.mac/Flurl.Http.xml"
       ]
     },
     "Libuv/1.9.0": {

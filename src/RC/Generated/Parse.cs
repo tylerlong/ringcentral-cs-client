@@ -22,69 +22,69 @@ namespace RingCentral
         }
         public class PostQueryParams
         {
-            public string homeCountry;
-            public bool? nationalAsPriority;
+            public string homeCountry { get; set; }
+            public bool? nationalAsPriority { get; set; }
         }
         public class PostRequest
         {
-            public string[] originalStrings;
+            public string[] originalStrings { get; set; }
         }
         public class PostResponse
         {
-            public string uri;
-            public HomeCountry[] homeCountry;
-            public PhoneNumber[] phoneNumbers;
-            public string originalString;
-            public string areaCode;
-            public string formattedNational;
-            public string formattedInternational;
-            public string dialable;
-            public string e164;
-            public bool? special;
-            public string normalized;
-            public Country[] country;
+            public string uri { get; set; }
+            public HomeCountry[] homeCountry { get; set; }
+            public PhoneNumber[] phoneNumbers { get; set; }
+            public string originalString { get; set; }
+            public string areaCode { get; set; }
+            public string formattedNational { get; set; }
+            public string formattedInternational { get; set; }
+            public string dialable { get; set; }
+            public string e164 { get; set; }
+            public bool? special { get; set; }
+            public string normalized { get; set; }
+            public Country[] country { get; set; }
         
             public class HomeCountry
             {
-                public string id;
-                public string uri;
-                public string callingCode;
-                public bool? emergencyCalling;
-                public string isoCode;
-                public string name;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string callingCode { get; set; }
+                public bool? emergencyCalling { get; set; }
+                public string isoCode { get; set; }
+                public string name { get; set; }
             }
         
             public class PhoneNumber
             {
-                public string areaCode;
-                public Country[] country;
-                public string dialable;
-                public string e164;
-                public string formattedInternational;
-                public string formattedNational;
-                public string originalString;
-                public bool? special;
-                public string normalized;
+                public string areaCode { get; set; }
+                public Country[] country { get; set; }
+                public string dialable { get; set; }
+                public string e164 { get; set; }
+                public string formattedInternational { get; set; }
+                public string formattedNational { get; set; }
+                public string originalString { get; set; }
+                public bool? special { get; set; }
+                public string normalized { get; set; }
         
                 public class Country
                 {
-                    public string id;
-                    public string uri;
-                    public string callingCode;
-                    public bool? emergencyCalling;
-                    public string isoCode;
-                    public string name;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string callingCode { get; set; }
+                    public bool? emergencyCalling { get; set; }
+                    public string isoCode { get; set; }
+                    public string name { get; set; }
                 }
             }
         
             public class Country
             {
-                public string id;
-                public string uri;
-                public string callingCode;
-                public bool? emergencyCalling;
-                public string isoCode;
-                public string name;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string callingCode { get; set; }
+                public bool? emergencyCalling { get; set; }
+                public string isoCode { get; set; }
+                public string name { get; set; }
             }
         }
         

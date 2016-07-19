@@ -22,63 +22,63 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string uri;
-            public Schedule schedule;
+            public string uri { get; set; }
+            public Schedule schedule { get; set; }
         
             public class Schedule
             {
-                public WeeklyRanges weeklyRanges;
+                public WeeklyRanges weeklyRanges { get; set; }
         
                 public class WeeklyRanges
                 {
-                    public Monday[] monday;
-                    public Tuesday[] tuesday;
-                    public Wednesday[] wednesday;
-                    public Thursday[] thursday;
-                    public Friday[] friday;
-                    public Saturday[] saturday;
-                    public Sunday[] sunday;
+                    public Monday[] monday { get; set; }
+                    public Tuesday[] tuesday { get; set; }
+                    public Wednesday[] wednesday { get; set; }
+                    public Thursday[] thursday { get; set; }
+                    public Friday[] friday { get; set; }
+                    public Saturday[] saturday { get; set; }
+                    public Sunday[] sunday { get; set; }
         
                     public class Monday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Tuesday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Wednesday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Thursday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Friday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Saturday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
         
                     public class Sunday
                     {
-                        public string from;
-                        public string to;
+                        public string from { get; set; }
+                        public string to { get; set; }
                     }
                 }
             }

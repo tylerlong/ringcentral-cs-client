@@ -64,17 +64,17 @@ namespace RingCentral
         }
         public class ListResponse
         {
-            public string uri;
-            public ApiVersion[] apiVersions;
-            public string serverVersion;
-            public string serverRevision;
+            public string uri { get; set; }
+            public ApiVersion[] apiVersions { get; set; }
+            public string serverVersion { get; set; }
+            public string serverRevision { get; set; }
         
             public class ApiVersion
             {
-                public string uri;
-                public string versionString;
-                public string releaseDate;
-                public string uriString;
+                public string uri { get; set; }
+                public string versionString { get; set; }
+                public string releaseDate { get; set; }
+                public string uriString { get; set; }
             }
         }
         
@@ -85,10 +85,10 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string uri;
-            public string versionString;
-            public string releaseDate;
-            public string uriString;
+            public string uri { get; set; }
+            public string versionString { get; set; }
+            public string releaseDate { get; set; }
+            public string uriString { get; set; }
         }
         
 

@@ -34,57 +34,57 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public string topic;
-            public string meetingType;
-            public string password;
-            public Schedule schedule;
-            public bool? allowJoinBeforeHost;
-            public bool? startHostVideo;
-            public bool? startParticipantsVideo;
-            public string[] audioOptions;
+            public string topic { get; set; }
+            public string meetingType { get; set; }
+            public string password { get; set; }
+            public Schedule schedule { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public bool? startHostVideo { get; set; }
+            public bool? startParticipantsVideo { get; set; }
+            public string[] audioOptions { get; set; }
         
             public class Schedule
             {
-                public string startTime;
-                public int? durationInMinutes;
-                public TimeZone timeZone;
+                public string startTime { get; set; }
+                public int? durationInMinutes { get; set; }
+                public TimeZone timeZone { get; set; }
         
                 public class TimeZone
                 {
-                    public string id;
+                    public string id { get; set; }
                 }
             }
         }
         public class PostResponse
         {
-            public string uri;
-            public string id;
-            public string topic;
-            public string meetingType;
-            public string password;
-            public string status;
-            public Links links;
-            public Schedule schedule;
-            public bool? allowJoinBeforeHost;
-            public bool? startHostVideo;
-            public bool? startParticipantsVideo;
-            public string[] audioOptions;
+            public string uri { get; set; }
+            public string id { get; set; }
+            public string topic { get; set; }
+            public string meetingType { get; set; }
+            public string password { get; set; }
+            public string status { get; set; }
+            public Links links { get; set; }
+            public Schedule schedule { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public bool? startHostVideo { get; set; }
+            public bool? startParticipantsVideo { get; set; }
+            public string[] audioOptions { get; set; }
         
             public class Links
             {
-                public string startUri;
-                public string joinUri;
+                public string startUri { get; set; }
+                public string joinUri { get; set; }
             }
         
             public class Schedule
             {
-                public string startTime;
-                public int? durationInMinutes;
-                public TimeZone timeZone;
+                public string startTime { get; set; }
+                public int? durationInMinutes { get; set; }
+                public TimeZone timeZone { get; set; }
         
                 public class TimeZone
                 {
-                    public string id;
+                    public string id { get; set; }
                 }
             }
         }
@@ -96,80 +96,80 @@ namespace RingCentral
         }
         public class ListResponse
         {
-            public string uri;
-            public Record[] records;
-            public Paging paging;
-            public Navigation navigation;
+            public string uri { get; set; }
+            public Record[] records { get; set; }
+            public Paging paging { get; set; }
+            public Navigation navigation { get; set; }
         
             public class Record
             {
-                public string uri;
-                public string id;
-                public string topic;
-                public string meetingType;
-                public string password;
-                public string status;
-                public Links links;
-                public Schedule schedule;
-                public bool? allowJoinBeforeHost;
-                public bool? startHostVideo;
-                public bool? startParticipantsVideo;
-                public string[] audioOptions;
+                public string uri { get; set; }
+                public string id { get; set; }
+                public string topic { get; set; }
+                public string meetingType { get; set; }
+                public string password { get; set; }
+                public string status { get; set; }
+                public Links links { get; set; }
+                public Schedule schedule { get; set; }
+                public bool? allowJoinBeforeHost { get; set; }
+                public bool? startHostVideo { get; set; }
+                public bool? startParticipantsVideo { get; set; }
+                public string[] audioOptions { get; set; }
         
                 public class Links
                 {
-                    public string startUri;
-                    public string joinUri;
+                    public string startUri { get; set; }
+                    public string joinUri { get; set; }
                 }
         
                 public class Schedule
                 {
-                    public string startTime;
-                    public int? durationInMinutes;
-                    public TimeZone timeZone;
+                    public string startTime { get; set; }
+                    public int? durationInMinutes { get; set; }
+                    public TimeZone timeZone { get; set; }
         
                     public class TimeZone
                     {
-                        public string id;
+                        public string id { get; set; }
                     }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         }
@@ -188,34 +188,34 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string uri;
-            public string id;
-            public string topic;
-            public string meetingType;
-            public string password;
-            public string status;
-            public Links links;
-            public Schedule schedule;
-            public bool? allowJoinBeforeHost;
-            public bool? startHostVideo;
-            public bool? startParticipantsVideo;
-            public string[] audioOptions;
+            public string uri { get; set; }
+            public string id { get; set; }
+            public string topic { get; set; }
+            public string meetingType { get; set; }
+            public string password { get; set; }
+            public string status { get; set; }
+            public Links links { get; set; }
+            public Schedule schedule { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public bool? startHostVideo { get; set; }
+            public bool? startParticipantsVideo { get; set; }
+            public string[] audioOptions { get; set; }
         
             public class Links
             {
-                public string startUri;
-                public string joinUri;
+                public string startUri { get; set; }
+                public string joinUri { get; set; }
             }
         
             public class Schedule
             {
-                public string startTime;
-                public int? durationInMinutes;
-                public TimeZone timeZone;
+                public string startTime { get; set; }
+                public int? durationInMinutes { get; set; }
+                public TimeZone timeZone { get; set; }
         
                 public class TimeZone
                 {
-                    public string id;
+                    public string id { get; set; }
                 }
             }
         }
@@ -227,57 +227,57 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public string topic;
-            public string meetingType;
-            public string password;
-            public Schedule schedule;
-            public bool? allowJoinBeforeHost;
-            public bool? startHostVideo;
-            public bool? startParticipantsVideo;
-            public string[] audioOptions;
+            public string topic { get; set; }
+            public string meetingType { get; set; }
+            public string password { get; set; }
+            public Schedule schedule { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public bool? startHostVideo { get; set; }
+            public bool? startParticipantsVideo { get; set; }
+            public string[] audioOptions { get; set; }
         
             public class Schedule
             {
-                public string startTime;
-                public int? durationInMinutes;
-                public TimeZone timeZone;
+                public string startTime { get; set; }
+                public int? durationInMinutes { get; set; }
+                public TimeZone timeZone { get; set; }
         
                 public class TimeZone
                 {
-                    public string id;
+                    public string id { get; set; }
                 }
             }
         }
         public class PutResponse
         {
-            public string uri;
-            public string id;
-            public string topic;
-            public string meetingType;
-            public string password;
-            public string status;
-            public Links links;
-            public Schedule schedule;
-            public bool? allowJoinBeforeHost;
-            public bool? startHostVideo;
-            public bool? startParticipantsVideo;
-            public string[] audioOptions;
+            public string uri { get; set; }
+            public string id { get; set; }
+            public string topic { get; set; }
+            public string meetingType { get; set; }
+            public string password { get; set; }
+            public string status { get; set; }
+            public Links links { get; set; }
+            public Schedule schedule { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public bool? startHostVideo { get; set; }
+            public bool? startParticipantsVideo { get; set; }
+            public string[] audioOptions { get; set; }
         
             public class Links
             {
-                public string startUri;
-                public string joinUri;
+                public string startUri { get; set; }
+                public string joinUri { get; set; }
             }
         
             public class Schedule
             {
-                public string startTime;
-                public int? durationInMinutes;
-                public TimeZone timeZone;
+                public string startTime { get; set; }
+                public int? durationInMinutes { get; set; }
+                public TimeZone timeZone { get; set; }
         
                 public class TimeZone
                 {
-                    public string id;
+                    public string id { get; set; }
                 }
             }
         }

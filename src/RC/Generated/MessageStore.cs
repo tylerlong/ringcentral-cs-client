@@ -28,115 +28,115 @@ namespace RingCentral
         }
         public class ListQueryParams
         {
-            public string availability;
-            public int? conversationId;
-            public string dateFrom;
-            public string dateTo;
-            public string direction;
-            public bool? distinctConversations;
-            public string messageType;
-            public string readStatus;
-            public int? page;
-            public int? perPage;
-            public string phoneNumber;
+            public string availability { get; set; }
+            public int? conversationId { get; set; }
+            public string dateFrom { get; set; }
+            public string dateTo { get; set; }
+            public string direction { get; set; }
+            public bool? distinctConversations { get; set; }
+            public string messageType { get; set; }
+            public string readStatus { get; set; }
+            public int? page { get; set; }
+            public int? perPage { get; set; }
+            public string phoneNumber { get; set; }
         }
         public class ListResponse
         {
-            public Record[] records;
-            public Navigation navigation;
-            public Paging paging;
+            public Record[] records { get; set; }
+            public Navigation navigation { get; set; }
+            public Paging paging { get; set; }
         
             public class Record
             {
-                public string id;
-                public string uri;
-                public Attachment[] attachments;
-                public string availability;
-                public int? conversationId;
-                public string creationTime;
-                public string deliveryErrorCode;
-                public string direction;
-                public int? faxPageCount;
-                public string faxResolution;
-                public From from;
-                public string lastModifiedTime;
-                public string messageStatus;
-                public bool? pgToDepartment;
-                public string priority;
-                public string readStatus;
-                public string smsDeliveryTime;
-                public int? smsSendingAttemptsCount;
-                public string subject;
-                public To[] to;
-                public string type;
-                public string vmTranscriptionStatus;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public Attachment[] attachments { get; set; }
+                public string availability { get; set; }
+                public int? conversationId { get; set; }
+                public string creationTime { get; set; }
+                public string deliveryErrorCode { get; set; }
+                public string direction { get; set; }
+                public int? faxPageCount { get; set; }
+                public string faxResolution { get; set; }
+                public From from { get; set; }
+                public string lastModifiedTime { get; set; }
+                public string messageStatus { get; set; }
+                public bool? pgToDepartment { get; set; }
+                public string priority { get; set; }
+                public string readStatus { get; set; }
+                public string smsDeliveryTime { get; set; }
+                public int? smsSendingAttemptsCount { get; set; }
+                public string subject { get; set; }
+                public To[] to { get; set; }
+                public string type { get; set; }
+                public string vmTranscriptionStatus { get; set; }
         
                 public class Attachment
                 {
-                    public string id;
-                    public string uri;
-                    public string type;
-                    public string contentType;
-                    public int? vmDuration;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string type { get; set; }
+                    public string contentType { get; set; }
+                    public int? vmDuration { get; set; }
                 }
         
                 public class From
                 {
-                    public string extensionNumber;
-                    public string location;
-                    public string messageStatus;
-                    public string faxErrorCode;
-                    public string name;
-                    public string phoneNumber;
+                    public string extensionNumber { get; set; }
+                    public string location { get; set; }
+                    public string messageStatus { get; set; }
+                    public string faxErrorCode { get; set; }
+                    public string name { get; set; }
+                    public string phoneNumber { get; set; }
                 }
         
                 public class To
                 {
-                    public string extensionNumber;
-                    public string location;
-                    public string messageStatus;
-                    public string faxErrorCode;
-                    public string name;
-                    public string phoneNumber;
+                    public string extensionNumber { get; set; }
+                    public string location { get; set; }
+                    public string messageStatus { get; set; }
+                    public string faxErrorCode { get; set; }
+                    public string name { get; set; }
+                    public string phoneNumber { get; set; }
                 }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         }
         
@@ -147,8 +147,8 @@ namespace RingCentral
         }
         public class DeleteQueryParams
         {
-            public bool? purge;
-            public int? conversationId;
+            public bool? purge { get; set; }
+            public int? conversationId { get; set; }
         }
         
         
@@ -159,56 +159,56 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string id;
-            public string uri;
-            public Attachment[] attachments;
-            public string availability;
-            public int? conversationId;
-            public string creationTime;
-            public string deliveryErrorCode;
-            public string direction;
-            public int? faxPageCount;
-            public string faxResolution;
-            public From from;
-            public string lastModifiedTime;
-            public string messageStatus;
-            public bool? pgToDepartment;
-            public string priority;
-            public string readStatus;
-            public string smsDeliveryTime;
-            public int? smsSendingAttemptsCount;
-            public string subject;
-            public To[] to;
-            public string type;
-            public string vmTranscriptionStatus;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public Attachment[] attachments { get; set; }
+            public string availability { get; set; }
+            public int? conversationId { get; set; }
+            public string creationTime { get; set; }
+            public string deliveryErrorCode { get; set; }
+            public string direction { get; set; }
+            public int? faxPageCount { get; set; }
+            public string faxResolution { get; set; }
+            public From from { get; set; }
+            public string lastModifiedTime { get; set; }
+            public string messageStatus { get; set; }
+            public bool? pgToDepartment { get; set; }
+            public string priority { get; set; }
+            public string readStatus { get; set; }
+            public string smsDeliveryTime { get; set; }
+            public int? smsSendingAttemptsCount { get; set; }
+            public string subject { get; set; }
+            public To[] to { get; set; }
+            public string type { get; set; }
+            public string vmTranscriptionStatus { get; set; }
         
             public class Attachment
             {
-                public string id;
-                public string uri;
-                public string type;
-                public string contentType;
-                public int? vmDuration;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string type { get; set; }
+                public string contentType { get; set; }
+                public int? vmDuration { get; set; }
             }
         
             public class From
             {
-                public string extensionNumber;
-                public string location;
-                public string messageStatus;
-                public string faxErrorCode;
-                public string name;
-                public string phoneNumber;
+                public string extensionNumber { get; set; }
+                public string location { get; set; }
+                public string messageStatus { get; set; }
+                public string faxErrorCode { get; set; }
+                public string name { get; set; }
+                public string phoneNumber { get; set; }
             }
         
             public class To
             {
-                public string extensionNumber;
-                public string location;
-                public string messageStatus;
-                public string faxErrorCode;
-                public string name;
-                public string phoneNumber;
+                public string extensionNumber { get; set; }
+                public string location { get; set; }
+                public string messageStatus { get; set; }
+                public string faxErrorCode { get; set; }
+                public string name { get; set; }
+                public string phoneNumber { get; set; }
             }
         }
         
@@ -219,60 +219,60 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public string readStatus;
+            public string readStatus { get; set; }
         }
         public class PutResponse
         {
-            public string id;
-            public string uri;
-            public Attachment[] attachments;
-            public string availability;
-            public int? conversationId;
-            public string creationTime;
-            public string deliveryErrorCode;
-            public string direction;
-            public int? faxPageCount;
-            public string faxResolution;
-            public From from;
-            public string lastModifiedTime;
-            public string messageStatus;
-            public bool? pgToDepartment;
-            public string priority;
-            public string readStatus;
-            public string smsDeliveryTime;
-            public int? smsSendingAttemptsCount;
-            public string subject;
-            public To[] to;
-            public string type;
-            public string vmTranscriptionStatus;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public Attachment[] attachments { get; set; }
+            public string availability { get; set; }
+            public int? conversationId { get; set; }
+            public string creationTime { get; set; }
+            public string deliveryErrorCode { get; set; }
+            public string direction { get; set; }
+            public int? faxPageCount { get; set; }
+            public string faxResolution { get; set; }
+            public From from { get; set; }
+            public string lastModifiedTime { get; set; }
+            public string messageStatus { get; set; }
+            public bool? pgToDepartment { get; set; }
+            public string priority { get; set; }
+            public string readStatus { get; set; }
+            public string smsDeliveryTime { get; set; }
+            public int? smsSendingAttemptsCount { get; set; }
+            public string subject { get; set; }
+            public To[] to { get; set; }
+            public string type { get; set; }
+            public string vmTranscriptionStatus { get; set; }
         
             public class Attachment
             {
-                public string id;
-                public string uri;
-                public string type;
-                public string contentType;
-                public int? vmDuration;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string type { get; set; }
+                public string contentType { get; set; }
+                public int? vmDuration { get; set; }
             }
         
             public class From
             {
-                public string extensionNumber;
-                public string location;
-                public string messageStatus;
-                public string faxErrorCode;
-                public string name;
-                public string phoneNumber;
+                public string extensionNumber { get; set; }
+                public string location { get; set; }
+                public string messageStatus { get; set; }
+                public string faxErrorCode { get; set; }
+                public string name { get; set; }
+                public string phoneNumber { get; set; }
             }
         
             public class To
             {
-                public string extensionNumber;
-                public string location;
-                public string messageStatus;
-                public string faxErrorCode;
-                public string name;
-                public string phoneNumber;
+                public string extensionNumber { get; set; }
+                public string location { get; set; }
+                public string messageStatus { get; set; }
+                public string faxErrorCode { get; set; }
+                public string name { get; set; }
+                public string phoneNumber { get; set; }
             }
         }
         

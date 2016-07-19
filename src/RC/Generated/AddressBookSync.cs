@@ -22,84 +22,84 @@ namespace RingCentral
         }
         public class GetQueryParams
         {
-            public string syncType;
-            public string syncToken;
-            public int? perPage;
-            public int? pageId;
+            public string syncType { get; set; }
+            public string syncToken { get; set; }
+            public int? perPage { get; set; }
+            public int? pageId { get; set; }
         }
         public class GetResponse
         {
-            public Record[] records;
-            public SyncInfo syncInfo;
-            public int? nextPageId;
-            public string nextPageUri;
+            public Record[] records { get; set; }
+            public SyncInfo syncInfo { get; set; }
+            public int? nextPageId { get; set; }
+            public string nextPageUri { get; set; }
         
             public class Record
             {
-                public int? id;
-                public string url;
-                public string availability;
-                public string firstName;
-                public string lastName;
-                public string middleName;
-                public string nickName;
-                public string company;
-                public string jobTitle;
-                public string homePhone;
-                public string homePhone2;
-                public string businessPhone;
-                public string businessPhone2;
-                public string mobilePhone;
-                public string businessFax;
-                public string companyPhone;
-                public string assistantPhone;
-                public string carPhone;
-                public string otherPhone;
-                public string otherFax;
-                public string callbackPhone;
-                public string email;
-                public string email2;
-                public string email3;
-                public HomeAddress homeAddress;
-                public BusinessAddress businessAddress;
-                public OtherAddress otherAddress;
-                public string birthday;
-                public string webPage;
-                public string notes;
+                public int? id { get; set; }
+                public string url { get; set; }
+                public string availability { get; set; }
+                public string firstName { get; set; }
+                public string lastName { get; set; }
+                public string middleName { get; set; }
+                public string nickName { get; set; }
+                public string company { get; set; }
+                public string jobTitle { get; set; }
+                public string homePhone { get; set; }
+                public string homePhone2 { get; set; }
+                public string businessPhone { get; set; }
+                public string businessPhone2 { get; set; }
+                public string mobilePhone { get; set; }
+                public string businessFax { get; set; }
+                public string companyPhone { get; set; }
+                public string assistantPhone { get; set; }
+                public string carPhone { get; set; }
+                public string otherPhone { get; set; }
+                public string otherFax { get; set; }
+                public string callbackPhone { get; set; }
+                public string email { get; set; }
+                public string email2 { get; set; }
+                public string email3 { get; set; }
+                public HomeAddress homeAddress { get; set; }
+                public BusinessAddress businessAddress { get; set; }
+                public OtherAddress otherAddress { get; set; }
+                public string birthday { get; set; }
+                public string webPage { get; set; }
+                public string notes { get; set; }
         
                 public class HomeAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
         
                 public class BusinessAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
         
                 public class OtherAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
             }
         
             public class SyncInfo
             {
-                public string syncType;
-                public string syncToken;
-                public string syncTime;
+                public string syncType { get; set; }
+                public string syncToken { get; set; }
+                public string syncTime { get; set; }
             }
         }
         

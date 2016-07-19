@@ -22,43 +22,43 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public From from;
-            public To to;
-            public CallerId callerId;
-            public bool? playPrompt;
-            public Country country;
+            public From from { get; set; }
+            public To to { get; set; }
+            public CallerId callerId { get; set; }
+            public bool? playPrompt { get; set; }
+            public Country country { get; set; }
         
             public class From
             {
-                public string phoneNumber;
-                public string forwardingNumberId;
+                public string phoneNumber { get; set; }
+                public string forwardingNumberId { get; set; }
             }
         
             public class To
             {
-                public string phoneNumber;
+                public string phoneNumber { get; set; }
             }
         
             public class CallerId
             {
-                public string phoneNumber;
+                public string phoneNumber { get; set; }
             }
         
             public class Country
             {
-                public string id;
+                public string id { get; set; }
             }
         }
         public class PostResponse
         {
-            public string id;
-            public Status status;
+            public string id { get; set; }
+            public Status status { get; set; }
         
             public class Status
             {
-                public string callStatus;
-                public string callerStatus;
-                public string calleeStatus;
+                public string callStatus { get; set; }
+                public string callerStatus { get; set; }
+                public string calleeStatus { get; set; }
             }
         }
         
@@ -76,14 +76,14 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string id;
-            public Status status;
+            public string id { get; set; }
+            public Status status { get; set; }
         
             public class Status
             {
-                public string callStatus;
-                public string callerStatus;
-                public string calleeStatus;
+                public string callStatus { get; set; }
+                public string callerStatus { get; set; }
+                public string calleeStatus { get; set; }
             }
         }
         

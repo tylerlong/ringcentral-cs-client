@@ -22,26 +22,26 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public Record[] records;
+            public Record[] records { get; set; }
         
             public class Record
             {
-                public string phoneNumber;
-                public string reservedTill;
+                public string phoneNumber { get; set; }
+                public string reservedTill { get; set; }
             }
         }
         public class PostResponse
         {
-            public Record[] records;
+            public Record[] records { get; set; }
         
             public class Record
             {
-                public string phoneNumber;
-                public string formattedNumber;
-                public string reservedTill;
-                public string reservationId;
-                public string status;
-                public string error;
+                public string phoneNumber { get; set; }
+                public string formattedNumber { get; set; }
+                public string reservedTill { get; set; }
+                public string reservationId { get; set; }
+                public string status { get; set; }
+                public string error { get; set; }
             }
         }
         

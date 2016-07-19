@@ -22,122 +22,122 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public int? id;
-            public string url;
-            public string availability;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public string nickName;
-            public string company;
-            public string jobTitle;
-            public string homePhone;
-            public string homePhone2;
-            public string businessPhone;
-            public string businessPhone2;
-            public string mobilePhone;
-            public string businessFax;
-            public string companyPhone;
-            public string assistantPhone;
-            public string carPhone;
-            public string otherPhone;
-            public string otherFax;
-            public string callbackPhone;
-            public string email;
-            public string email2;
-            public string email3;
-            public HomeAddress homeAddress;
-            public BusinessAddress businessAddress;
-            public OtherAddress otherAddress;
-            public string birthday;
-            public string webPage;
-            public string notes;
+            public int? id { get; set; }
+            public string url { get; set; }
+            public string availability { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string middleName { get; set; }
+            public string nickName { get; set; }
+            public string company { get; set; }
+            public string jobTitle { get; set; }
+            public string homePhone { get; set; }
+            public string homePhone2 { get; set; }
+            public string businessPhone { get; set; }
+            public string businessPhone2 { get; set; }
+            public string mobilePhone { get; set; }
+            public string businessFax { get; set; }
+            public string companyPhone { get; set; }
+            public string assistantPhone { get; set; }
+            public string carPhone { get; set; }
+            public string otherPhone { get; set; }
+            public string otherFax { get; set; }
+            public string callbackPhone { get; set; }
+            public string email { get; set; }
+            public string email2 { get; set; }
+            public string email3 { get; set; }
+            public HomeAddress homeAddress { get; set; }
+            public BusinessAddress businessAddress { get; set; }
+            public OtherAddress otherAddress { get; set; }
+            public string birthday { get; set; }
+            public string webPage { get; set; }
+            public string notes { get; set; }
         
             public class HomeAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class OtherAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         public class PostResponse
         {
-            public int? id;
-            public string url;
-            public string availability;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public string nickName;
-            public string company;
-            public string jobTitle;
-            public string homePhone;
-            public string homePhone2;
-            public string businessPhone;
-            public string businessPhone2;
-            public string mobilePhone;
-            public string businessFax;
-            public string companyPhone;
-            public string assistantPhone;
-            public string carPhone;
-            public string otherPhone;
-            public string otherFax;
-            public string callbackPhone;
-            public string email;
-            public string email2;
-            public string email3;
-            public HomeAddress homeAddress;
-            public BusinessAddress businessAddress;
-            public OtherAddress otherAddress;
-            public string birthday;
-            public string webPage;
-            public string notes;
+            public int? id { get; set; }
+            public string url { get; set; }
+            public string availability { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string middleName { get; set; }
+            public string nickName { get; set; }
+            public string company { get; set; }
+            public string jobTitle { get; set; }
+            public string homePhone { get; set; }
+            public string homePhone2 { get; set; }
+            public string businessPhone { get; set; }
+            public string businessPhone2 { get; set; }
+            public string mobilePhone { get; set; }
+            public string businessFax { get; set; }
+            public string companyPhone { get; set; }
+            public string assistantPhone { get; set; }
+            public string carPhone { get; set; }
+            public string otherPhone { get; set; }
+            public string otherFax { get; set; }
+            public string callbackPhone { get; set; }
+            public string email { get; set; }
+            public string email2 { get; set; }
+            public string email3 { get; set; }
+            public HomeAddress homeAddress { get; set; }
+            public BusinessAddress businessAddress { get; set; }
+            public OtherAddress otherAddress { get; set; }
+            public string birthday { get; set; }
+            public string webPage { get; set; }
+            public string notes { get; set; }
         
             public class HomeAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class OtherAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         
@@ -148,115 +148,115 @@ namespace RingCentral
         }
         public class ListQueryParams
         {
-            public string phoneNumber;
-            public string startsWith;
-            public string sortBy;
-            public int? page;
-            public int? perPage;
+            public string phoneNumber { get; set; }
+            public string startsWith { get; set; }
+            public string sortBy { get; set; }
+            public int? page { get; set; }
+            public int? perPage { get; set; }
         }
         public class ListResponse
         {
-            public Record[] records;
-            public Navigation navigation;
-            public Paging paging;
+            public Record[] records { get; set; }
+            public Navigation navigation { get; set; }
+            public Paging paging { get; set; }
         
             public class Record
             {
-                public int? id;
-                public string url;
-                public string availability;
-                public string firstName;
-                public string lastName;
-                public string middleName;
-                public string nickName;
-                public string company;
-                public string jobTitle;
-                public string homePhone;
-                public string homePhone2;
-                public string businessPhone;
-                public string businessPhone2;
-                public string mobilePhone;
-                public string businessFax;
-                public string companyPhone;
-                public string assistantPhone;
-                public string carPhone;
-                public string otherPhone;
-                public string otherFax;
-                public string callbackPhone;
-                public string email;
-                public string email2;
-                public string email3;
-                public HomeAddress homeAddress;
-                public BusinessAddress businessAddress;
-                public OtherAddress otherAddress;
-                public string birthday;
-                public string webPage;
-                public string notes;
+                public int? id { get; set; }
+                public string url { get; set; }
+                public string availability { get; set; }
+                public string firstName { get; set; }
+                public string lastName { get; set; }
+                public string middleName { get; set; }
+                public string nickName { get; set; }
+                public string company { get; set; }
+                public string jobTitle { get; set; }
+                public string homePhone { get; set; }
+                public string homePhone2 { get; set; }
+                public string businessPhone { get; set; }
+                public string businessPhone2 { get; set; }
+                public string mobilePhone { get; set; }
+                public string businessFax { get; set; }
+                public string companyPhone { get; set; }
+                public string assistantPhone { get; set; }
+                public string carPhone { get; set; }
+                public string otherPhone { get; set; }
+                public string otherFax { get; set; }
+                public string callbackPhone { get; set; }
+                public string email { get; set; }
+                public string email2 { get; set; }
+                public string email3 { get; set; }
+                public HomeAddress homeAddress { get; set; }
+                public BusinessAddress businessAddress { get; set; }
+                public OtherAddress otherAddress { get; set; }
+                public string birthday { get; set; }
+                public string webPage { get; set; }
+                public string notes { get; set; }
         
                 public class HomeAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
         
                 public class BusinessAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
         
                 public class OtherAddress
                 {
-                    public string country;
-                    public string state;
-                    public string city;
-                    public string street;
-                    public string zip;
+                    public string country { get; set; }
+                    public string state { get; set; }
+                    public string city { get; set; }
+                    public string street { get; set; }
+                    public string zip { get; set; }
                 }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         }
         
@@ -274,62 +274,62 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public int? id;
-            public string url;
-            public string availability;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public string nickName;
-            public string company;
-            public string jobTitle;
-            public string homePhone;
-            public string homePhone2;
-            public string businessPhone;
-            public string businessPhone2;
-            public string mobilePhone;
-            public string businessFax;
-            public string companyPhone;
-            public string assistantPhone;
-            public string carPhone;
-            public string otherPhone;
-            public string otherFax;
-            public string callbackPhone;
-            public string email;
-            public string email2;
-            public string email3;
-            public HomeAddress homeAddress;
-            public BusinessAddress businessAddress;
-            public OtherAddress otherAddress;
-            public string birthday;
-            public string webPage;
-            public string notes;
+            public int? id { get; set; }
+            public string url { get; set; }
+            public string availability { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string middleName { get; set; }
+            public string nickName { get; set; }
+            public string company { get; set; }
+            public string jobTitle { get; set; }
+            public string homePhone { get; set; }
+            public string homePhone2 { get; set; }
+            public string businessPhone { get; set; }
+            public string businessPhone2 { get; set; }
+            public string mobilePhone { get; set; }
+            public string businessFax { get; set; }
+            public string companyPhone { get; set; }
+            public string assistantPhone { get; set; }
+            public string carPhone { get; set; }
+            public string otherPhone { get; set; }
+            public string otherFax { get; set; }
+            public string callbackPhone { get; set; }
+            public string email { get; set; }
+            public string email2 { get; set; }
+            public string email3 { get; set; }
+            public HomeAddress homeAddress { get; set; }
+            public BusinessAddress businessAddress { get; set; }
+            public OtherAddress otherAddress { get; set; }
+            public string birthday { get; set; }
+            public string webPage { get; set; }
+            public string notes { get; set; }
         
             public class HomeAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class OtherAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         
@@ -340,122 +340,122 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public int? id;
-            public string url;
-            public string availability;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public string nickName;
-            public string company;
-            public string jobTitle;
-            public string homePhone;
-            public string homePhone2;
-            public string businessPhone;
-            public string businessPhone2;
-            public string mobilePhone;
-            public string businessFax;
-            public string companyPhone;
-            public string assistantPhone;
-            public string carPhone;
-            public string otherPhone;
-            public string otherFax;
-            public string callbackPhone;
-            public string email;
-            public string email2;
-            public string email3;
-            public HomeAddress homeAddress;
-            public BusinessAddress businessAddress;
-            public OtherAddress otherAddress;
-            public string birthday;
-            public string webPage;
-            public string notes;
+            public int? id { get; set; }
+            public string url { get; set; }
+            public string availability { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string middleName { get; set; }
+            public string nickName { get; set; }
+            public string company { get; set; }
+            public string jobTitle { get; set; }
+            public string homePhone { get; set; }
+            public string homePhone2 { get; set; }
+            public string businessPhone { get; set; }
+            public string businessPhone2 { get; set; }
+            public string mobilePhone { get; set; }
+            public string businessFax { get; set; }
+            public string companyPhone { get; set; }
+            public string assistantPhone { get; set; }
+            public string carPhone { get; set; }
+            public string otherPhone { get; set; }
+            public string otherFax { get; set; }
+            public string callbackPhone { get; set; }
+            public string email { get; set; }
+            public string email2 { get; set; }
+            public string email3 { get; set; }
+            public HomeAddress homeAddress { get; set; }
+            public BusinessAddress businessAddress { get; set; }
+            public OtherAddress otherAddress { get; set; }
+            public string birthday { get; set; }
+            public string webPage { get; set; }
+            public string notes { get; set; }
         
             public class HomeAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class OtherAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         public class PutResponse
         {
-            public int? id;
-            public string url;
-            public string availability;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public string nickName;
-            public string company;
-            public string jobTitle;
-            public string homePhone;
-            public string homePhone2;
-            public string businessPhone;
-            public string businessPhone2;
-            public string mobilePhone;
-            public string businessFax;
-            public string companyPhone;
-            public string assistantPhone;
-            public string carPhone;
-            public string otherPhone;
-            public string otherFax;
-            public string callbackPhone;
-            public string email;
-            public string email2;
-            public string email3;
-            public HomeAddress homeAddress;
-            public BusinessAddress businessAddress;
-            public OtherAddress otherAddress;
-            public string birthday;
-            public string webPage;
-            public string notes;
+            public int? id { get; set; }
+            public string url { get; set; }
+            public string availability { get; set; }
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public string middleName { get; set; }
+            public string nickName { get; set; }
+            public string company { get; set; }
+            public string jobTitle { get; set; }
+            public string homePhone { get; set; }
+            public string homePhone2 { get; set; }
+            public string businessPhone { get; set; }
+            public string businessPhone2 { get; set; }
+            public string mobilePhone { get; set; }
+            public string businessFax { get; set; }
+            public string companyPhone { get; set; }
+            public string assistantPhone { get; set; }
+            public string carPhone { get; set; }
+            public string otherPhone { get; set; }
+            public string otherFax { get; set; }
+            public string callbackPhone { get; set; }
+            public string email { get; set; }
+            public string email2 { get; set; }
+            public string email3 { get; set; }
+            public HomeAddress homeAddress { get; set; }
+            public BusinessAddress businessAddress { get; set; }
+            public OtherAddress otherAddress { get; set; }
+            public string birthday { get; set; }
+            public string webPage { get; set; }
+            public string notes { get; set; }
         
             public class HomeAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         
             public class OtherAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         

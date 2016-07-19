@@ -22,146 +22,146 @@ namespace RingCentral
         }
         public class ListResponse
         {
-            public Record[] records;
-            public Navigation navigation;
-            public Paging paging;
+            public Record[] records { get; set; }
+            public Navigation navigation { get; set; }
+            public Paging paging { get; set; }
         
             public class Record
             {
-                public string id;
-                public string uri;
-                public string sku;
-                public string type;
-                public string name;
-                public string serial;
-                public string computerName;
-                public Model model;
-                public Extension extension;
-                public EmergencyServiceAddress emergencyServiceAddress;
-                public PhoneLines phoneLines;
-                public Shipping shipping;
-                public int? boxBillingId;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string sku { get; set; }
+                public string type { get; set; }
+                public string name { get; set; }
+                public string serial { get; set; }
+                public string computerName { get; set; }
+                public Model model { get; set; }
+                public Extension extension { get; set; }
+                public EmergencyServiceAddress emergencyServiceAddress { get; set; }
+                public PhoneLines phoneLines { get; set; }
+                public Shipping shipping { get; set; }
+                public int? boxBillingId { get; set; }
         
                 public class Model
                 {
-                    public string id;
-                    public string name;
-                    public Addon[] addons;
+                    public string id { get; set; }
+                    public string name { get; set; }
+                    public Addon[] addons { get; set; }
         
                     public class Addon
                     {
-                        public string id;
-                        public int? count;
+                        public string id { get; set; }
+                        public int? count { get; set; }
                     }
                 }
         
                 public class Extension
                 {
-                    public string id;
-                    public string uri;
-                    public string extensionNumber;
-                    public string partnerId;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string extensionNumber { get; set; }
+                    public string partnerId { get; set; }
                 }
         
                 public class EmergencyServiceAddress
                 {
-                    public string customerName;
-                    public string street;
-                    public string street2;
-                    public string city;
-                    public string state;
-                    public string zip;
-                    public string country;
+                    public string customerName { get; set; }
+                    public string street { get; set; }
+                    public string street2 { get; set; }
+                    public string city { get; set; }
+                    public string state { get; set; }
+                    public string zip { get; set; }
+                    public string country { get; set; }
                 }
         
                 public class PhoneLines
                 {
-                    public string lineType;
-                    public PhoneInfo phoneInfo;
+                    public string lineType { get; set; }
+                    public PhoneInfo phoneInfo { get; set; }
         
                     public class PhoneInfo
                     {
-                        public int? id;
-                        public Country country;
-                        public string location;
-                        public string paymentType;
-                        public string phoneNumber;
-                        public string status;
-                        public string type;
-                        public string usageType;
+                        public int? id { get; set; }
+                        public Country country { get; set; }
+                        public string location { get; set; }
+                        public string paymentType { get; set; }
+                        public string phoneNumber { get; set; }
+                        public string status { get; set; }
+                        public string type { get; set; }
+                        public string usageType { get; set; }
         
                         public class Country
                         {
-                            public string id;
-                            public string uri;
-                            public string name;
+                            public string id { get; set; }
+                            public string uri { get; set; }
+                            public string name { get; set; }
                         }
                     }
                 }
         
                 public class Shipping
                 {
-                    public string status;
-                    public string carrier;
-                    public string trackingNumber;
-                    public Method[] method;
-                    public Address[] address;
+                    public string status { get; set; }
+                    public string carrier { get; set; }
+                    public string trackingNumber { get; set; }
+                    public Method[] method { get; set; }
+                    public Address[] address { get; set; }
         
                     public class Method
                     {
-                        public string id;
-                        public string name;
+                        public string id { get; set; }
+                        public string name { get; set; }
                     }
         
                     public class Address
                     {
-                        public string customerName;
-                        public string street;
-                        public string street2;
-                        public string city;
-                        public string state;
-                        public string zip;
-                        public string country;
+                        public string customerName { get; set; }
+                        public string street { get; set; }
+                        public string street2 { get; set; }
+                        public string city { get; set; }
+                        public string state { get; set; }
+                        public string zip { get; set; }
+                        public string country { get; set; }
                     }
                 }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         }
         
@@ -172,100 +172,100 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string id;
-            public string uri;
-            public string sku;
-            public string type;
-            public string name;
-            public string serial;
-            public string computerName;
-            public Model model;
-            public Extension extension;
-            public EmergencyServiceAddress emergencyServiceAddress;
-            public PhoneLines phoneLines;
-            public Shipping shipping;
-            public int? boxBillingId;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public string sku { get; set; }
+            public string type { get; set; }
+            public string name { get; set; }
+            public string serial { get; set; }
+            public string computerName { get; set; }
+            public Model model { get; set; }
+            public Extension extension { get; set; }
+            public EmergencyServiceAddress emergencyServiceAddress { get; set; }
+            public PhoneLines phoneLines { get; set; }
+            public Shipping shipping { get; set; }
+            public int? boxBillingId { get; set; }
         
             public class Model
             {
-                public string id;
-                public string name;
-                public Addon[] addons;
+                public string id { get; set; }
+                public string name { get; set; }
+                public Addon[] addons { get; set; }
         
                 public class Addon
                 {
-                    public string id;
-                    public int? count;
+                    public string id { get; set; }
+                    public int? count { get; set; }
                 }
             }
         
             public class Extension
             {
-                public string id;
-                public string uri;
-                public string extensionNumber;
-                public string partnerId;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string extensionNumber { get; set; }
+                public string partnerId { get; set; }
             }
         
             public class EmergencyServiceAddress
             {
-                public string customerName;
-                public string street;
-                public string street2;
-                public string city;
-                public string state;
-                public string zip;
-                public string country;
+                public string customerName { get; set; }
+                public string street { get; set; }
+                public string street2 { get; set; }
+                public string city { get; set; }
+                public string state { get; set; }
+                public string zip { get; set; }
+                public string country { get; set; }
             }
         
             public class PhoneLines
             {
-                public string lineType;
-                public PhoneInfo phoneInfo;
+                public string lineType { get; set; }
+                public PhoneInfo phoneInfo { get; set; }
         
                 public class PhoneInfo
                 {
-                    public int? id;
-                    public Country country;
-                    public string location;
-                    public string paymentType;
-                    public string phoneNumber;
-                    public string status;
-                    public string type;
-                    public string usageType;
+                    public int? id { get; set; }
+                    public Country country { get; set; }
+                    public string location { get; set; }
+                    public string paymentType { get; set; }
+                    public string phoneNumber { get; set; }
+                    public string status { get; set; }
+                    public string type { get; set; }
+                    public string usageType { get; set; }
         
                     public class Country
                     {
-                        public string id;
-                        public string uri;
-                        public string name;
+                        public string id { get; set; }
+                        public string uri { get; set; }
+                        public string name { get; set; }
                     }
                 }
             }
         
             public class Shipping
             {
-                public string status;
-                public string carrier;
-                public string trackingNumber;
-                public Method[] method;
-                public Address[] address;
+                public string status { get; set; }
+                public string carrier { get; set; }
+                public string trackingNumber { get; set; }
+                public Method[] method { get; set; }
+                public Address[] address { get; set; }
         
                 public class Method
                 {
-                    public string id;
-                    public string name;
+                    public string id { get; set; }
+                    public string name { get; set; }
                 }
         
                 public class Address
                 {
-                    public string customerName;
-                    public string street;
-                    public string street2;
-                    public string city;
-                    public string state;
-                    public string zip;
-                    public string country;
+                    public string customerName { get; set; }
+                    public string street { get; set; }
+                    public string street2 { get; set; }
+                    public string city { get; set; }
+                    public string state { get; set; }
+                    public string zip { get; set; }
+                    public string country { get; set; }
                 }
             }
         }

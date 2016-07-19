@@ -22,39 +22,39 @@ namespace RingCentral
         }
         public class PostQueryParams
         {
-            public bool? aggregated;
+            public bool? aggregated { get; set; }
         }
         public class PostRequest
         {
-            public string[] eventFilters;
-            public DeliveryMode deliveryMode;
+            public string[] eventFilters { get; set; }
+            public DeliveryMode deliveryMode { get; set; }
         
             public class DeliveryMode
             {
-                public string transportType;
-                public bool? encryption;
+                public string transportType { get; set; }
+                public bool? encryption { get; set; }
             }
         }
         public class PostResponse
         {
-            public string id;
-            public string uri;
-            public string[] eventFilters;
-            public string expirationTime;
-            public int? expiresIn;
-            public string status;
-            public string creationTime;
-            public DeliveryMode deliveryMode;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public string[] eventFilters { get; set; }
+            public string expirationTime { get; set; }
+            public int? expiresIn { get; set; }
+            public string status { get; set; }
+            public string creationTime { get; set; }
+            public DeliveryMode deliveryMode { get; set; }
         
             public class DeliveryMode
             {
-                public string transportType;
-                public bool? encryption;
-                public string address;
-                public string subscriberKey;
-                public string secretKey;
-                public string encryptionAlgorithm;
-                public string encryptionKey;
+                public string transportType { get; set; }
+                public bool? encryption { get; set; }
+                public string address { get; set; }
+                public string subscriberKey { get; set; }
+                public string secretKey { get; set; }
+                public string encryptionAlgorithm { get; set; }
+                public string encryptionKey { get; set; }
             }
         }
         
@@ -72,24 +72,24 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string id;
-            public string uri;
-            public string[] eventFilters;
-            public string expirationTime;
-            public int? expiresIn;
-            public string status;
-            public string creationTime;
-            public DeliveryMode deliveryMode;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public string[] eventFilters { get; set; }
+            public string expirationTime { get; set; }
+            public int? expiresIn { get; set; }
+            public string status { get; set; }
+            public string creationTime { get; set; }
+            public DeliveryMode deliveryMode { get; set; }
         
             public class DeliveryMode
             {
-                public string transportType;
-                public bool? encryption;
-                public string address;
-                public string subscriberKey;
-                public string secretKey;
-                public string encryptionAlgorithm;
-                public string encryptionKey;
+                public string transportType { get; set; }
+                public bool? encryption { get; set; }
+                public string address { get; set; }
+                public string subscriberKey { get; set; }
+                public string secretKey { get; set; }
+                public string encryptionAlgorithm { get; set; }
+                public string encryptionKey { get; set; }
             }
         }
         
@@ -100,32 +100,32 @@ namespace RingCentral
         }
         public class PutQueryParams
         {
-            public bool? aggregated;
+            public bool? aggregated { get; set; }
         }
         public class PutRequest
         {
-            public string[] eventFilters;
+            public string[] eventFilters { get; set; }
         }
         public class PutResponse
         {
-            public string id;
-            public string uri;
-            public string[] eventFilters;
-            public string expirationTime;
-            public int? expiresIn;
-            public string status;
-            public string creationTime;
-            public DeliveryMode deliveryMode;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public string[] eventFilters { get; set; }
+            public string expirationTime { get; set; }
+            public int? expiresIn { get; set; }
+            public string status { get; set; }
+            public string creationTime { get; set; }
+            public DeliveryMode deliveryMode { get; set; }
         
             public class DeliveryMode
             {
-                public string transportType;
-                public bool? encryption;
-                public string address;
-                public string subscriberKey;
-                public string secretKey;
-                public string encryptionAlgorithm;
-                public string encryptionKey;
+                public string transportType { get; set; }
+                public bool? encryption { get; set; }
+                public string address { get; set; }
+                public string subscriberKey { get; set; }
+                public string secretKey { get; set; }
+                public string encryptionAlgorithm { get; set; }
+                public string encryptionKey { get; set; }
             }
         }
         

@@ -22,21 +22,21 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public string id;
-            public string value;
+            public string id { get; set; }
+            public string value { get; set; }
         }
         public class PutResponse
         {
-            public string id;
-            public string uri;
-            public string value;
-            public string lastModifiedTime;
-            public Attachment attachment;
+            public string id { get; set; }
+            public string uri { get; set; }
+            public string value { get; set; }
+            public string lastModifiedTime { get; set; }
+            public Attachment attachment { get; set; }
         
             public class Attachment
             {
-                public string uri;
-                public string contentType;
+                public string uri { get; set; }
+                public string contentType { get; set; }
             }
         }
         

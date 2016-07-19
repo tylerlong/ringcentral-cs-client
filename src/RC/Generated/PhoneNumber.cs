@@ -22,81 +22,81 @@ namespace RingCentral
         }
         public class ListQueryParams
         {
-            public string usageType;
-            public int? page;
-            public int? perPage;
+            public string usageType { get; set; }
+            public int? page { get; set; }
+            public int? perPage { get; set; }
         }
         public class ListResponse
         {
-            public Record[] records;
-            public Navigation navigation;
-            public Paging paging;
+            public Record[] records { get; set; }
+            public Navigation navigation { get; set; }
+            public Paging paging { get; set; }
         
             public class Record
             {
-                public int? id;
-                public Country country;
-                public Extension extension;
-                public string[] features;
-                public string location;
-                public string paymentType;
-                public string phoneNumber;
-                public string status;
-                public string type;
-                public string usageType;
+                public int? id { get; set; }
+                public Country country { get; set; }
+                public Extension extension { get; set; }
+                public string[] features { get; set; }
+                public string location { get; set; }
+                public string paymentType { get; set; }
+                public string phoneNumber { get; set; }
+                public string status { get; set; }
+                public string type { get; set; }
+                public string usageType { get; set; }
         
                 public class Country
                 {
-                    public string id;
-                    public string uri;
-                    public string name;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string name { get; set; }
                 }
         
                 public class Extension
                 {
-                    public string id;
-                    public string uri;
-                    public string extensionNumber;
-                    public string partnerId;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string extensionNumber { get; set; }
+                    public string partnerId { get; set; }
                 }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         }
         
@@ -107,30 +107,30 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public int? id;
-            public Country country;
-            public Extension extension;
-            public string[] features;
-            public string location;
-            public string paymentType;
-            public string phoneNumber;
-            public string status;
-            public string type;
-            public string usageType;
+            public int? id { get; set; }
+            public Country country { get; set; }
+            public Extension extension { get; set; }
+            public string[] features { get; set; }
+            public string location { get; set; }
+            public string paymentType { get; set; }
+            public string phoneNumber { get; set; }
+            public string status { get; set; }
+            public string type { get; set; }
+            public string usageType { get; set; }
         
             public class Country
             {
-                public string id;
-                public string uri;
-                public string name;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string name { get; set; }
             }
         
             public class Extension
             {
-                public string id;
-                public string uri;
-                public string extensionNumber;
-                public string partnerId;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string extensionNumber { get; set; }
+                public string partnerId { get; set; }
             }
         }
         

@@ -22,25 +22,25 @@ namespace RingCentral
         }
         public class PostRequest
         {
-            public string grant_type;
-            public int? access_token_ttl;
-            public int? refresh_token_ttl;
-            public string username;
-            public string extension;
-            public string password;
-            public string scope;
-            public string endpoint_id;
+            public string grant_type { get; set; }
+            public int? access_token_ttl { get; set; }
+            public int? refresh_token_ttl { get; set; }
+            public string username { get; set; }
+            public string extension { get; set; }
+            public string password { get; set; }
+            public string scope { get; set; }
+            public string endpoint_id { get; set; }
         }
         public class PostResponse
         {
-            public string access_token;
-            public int? expires_in;
-            public string refresh_token;
-            public int? refresh_token_expires_in;
-            public string scope;
-            public string token_type;
-            public string owner_id;
-            public string endpoint_id;
+            public string access_token { get; set; }
+            public int? expires_in { get; set; }
+            public string refresh_token { get; set; }
+            public int? refresh_token_expires_in { get; set; }
+            public string scope { get; set; }
+            public string token_type { get; set; }
+            public string owner_id { get; set; }
+            public string endpoint_id { get; set; }
         }
         
 

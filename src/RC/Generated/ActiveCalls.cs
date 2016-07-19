@@ -22,142 +22,142 @@ namespace RingCentral
         }
         public class ListQueryParams
         {
-            public string direction;
-            public string type;
-            public int? page;
-            public int? perPage;
+            public string direction { get; set; }
+            public string type { get; set; }
+            public int? page { get; set; }
+            public int? perPage { get; set; }
         }
         public class ListResponse
         {
-            public Record[] records;
-            public Navigation navigation;
-            public Paging paging;
+            public Record[] records { get; set; }
+            public Navigation navigation { get; set; }
+            public Paging paging { get; set; }
         
             public class Record
             {
-                public string id;
-                public string uri;
-                public string sessionId;
-                public From from;
-                public To to;
-                public string type;
-                public string direction;
-                public string action;
-                public string result;
-                public string startTime;
-                public int? duration;
-                public Recording recording;
-                public string lastModifiedTime;
-                public string transport;
-                public Leg[] legs;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string sessionId { get; set; }
+                public From from { get; set; }
+                public To to { get; set; }
+                public string type { get; set; }
+                public string direction { get; set; }
+                public string action { get; set; }
+                public string result { get; set; }
+                public string startTime { get; set; }
+                public int? duration { get; set; }
+                public Recording recording { get; set; }
+                public string lastModifiedTime { get; set; }
+                public string transport { get; set; }
+                public Leg[] legs { get; set; }
         
                 public class From
                 {
-                    public string phoneNumber;
-                    public string extensionNumber;
-                    public string location;
-                    public string name;
+                    public string phoneNumber { get; set; }
+                    public string extensionNumber { get; set; }
+                    public string location { get; set; }
+                    public string name { get; set; }
                 }
         
                 public class To
                 {
-                    public string phoneNumber;
-                    public string extensionNumber;
-                    public string location;
-                    public string name;
+                    public string phoneNumber { get; set; }
+                    public string extensionNumber { get; set; }
+                    public string location { get; set; }
+                    public string name { get; set; }
                 }
         
                 public class Recording
                 {
-                    public int? id;
-                    public string uri;
-                    public string type;
-                    public string contentUri;
+                    public int? id { get; set; }
+                    public string uri { get; set; }
+                    public string type { get; set; }
+                    public string contentUri { get; set; }
                 }
         
                 public class Leg
                 {
-                    public string action;
-                    public string direction;
-                    public int? duration;
-                    public Extension extension;
-                    public string legType;
-                    public string startTime;
-                    public string type;
-                    public string result;
-                    public From from;
-                    public To to;
-                    public string transport;
-                    public Recording recording;
+                    public string action { get; set; }
+                    public string direction { get; set; }
+                    public int? duration { get; set; }
+                    public Extension extension { get; set; }
+                    public string legType { get; set; }
+                    public string startTime { get; set; }
+                    public string type { get; set; }
+                    public string result { get; set; }
+                    public From from { get; set; }
+                    public To to { get; set; }
+                    public string transport { get; set; }
+                    public Recording recording { get; set; }
         
                     public class Extension
                     {
-                        public int? id;
-                        public string uri;
+                        public int? id { get; set; }
+                        public string uri { get; set; }
                     }
         
                     public class From
                     {
-                        public string phoneNumber;
-                        public string extensionNumber;
-                        public string location;
-                        public string name;
+                        public string phoneNumber { get; set; }
+                        public string extensionNumber { get; set; }
+                        public string location { get; set; }
+                        public string name { get; set; }
                     }
         
                     public class To
                     {
-                        public string phoneNumber;
-                        public string extensionNumber;
-                        public string location;
-                        public string name;
+                        public string phoneNumber { get; set; }
+                        public string extensionNumber { get; set; }
+                        public string location { get; set; }
+                        public string name { get; set; }
                     }
         
                     public class Recording
                     {
-                        public int? id;
-                        public string uri;
-                        public string type;
-                        public string contentUri;
+                        public int? id { get; set; }
+                        public string uri { get; set; }
+                        public string type { get; set; }
+                        public string contentUri { get; set; }
                     }
                 }
             }
         
             public class Navigation
             {
-                public FirstPage firstPage;
-                public NextPage nextPage;
-                public PreviousPage previousPage;
-                public LastPage lastPage;
+                public FirstPage firstPage { get; set; }
+                public NextPage nextPage { get; set; }
+                public PreviousPage previousPage { get; set; }
+                public LastPage lastPage { get; set; }
         
                 public class FirstPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class NextPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class PreviousPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
         
                 public class LastPage
                 {
-                    public string uri;
+                    public string uri { get; set; }
                 }
             }
         
             public class Paging
             {
-                public int? page;
-                public int? perPage;
-                public int? pageStart;
-                public int? pageEnd;
-                public int? totalPages;
-                public int? totalElements;
+                public int? page { get; set; }
+                public int? perPage { get; set; }
+                public int? pageStart { get; set; }
+                public int? pageEnd { get; set; }
+                public int? totalPages { get; set; }
+                public int? totalElements { get; set; }
             }
         }
         

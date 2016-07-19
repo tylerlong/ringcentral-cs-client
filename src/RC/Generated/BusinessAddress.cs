@@ -22,18 +22,18 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string uri;
-            public string company;
-            public string email;
-            public BusinessAddress businessAddress;
+            public string uri { get; set; }
+            public string company { get; set; }
+            public string email { get; set; }
+            public BusinessAddress businessAddress { get; set; }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         
@@ -44,33 +44,33 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public string company;
-            public string email;
-            public BusinessAddress businessAddress;
+            public string company { get; set; }
+            public string email { get; set; }
+            public BusinessAddress businessAddress { get; set; }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         public class PutResponse
         {
-            public string uri;
-            public string company;
-            public string email;
-            public BusinessAddress businessAddress;
+            public string uri { get; set; }
+            public string company { get; set; }
+            public string email { get; set; }
+            public BusinessAddress businessAddress { get; set; }
         
             public class BusinessAddress
             {
-                public string country;
-                public string state;
-                public string city;
-                public string street;
-                public string zip;
+                public string country { get; set; }
+                public string state { get; set; }
+                public string city { get; set; }
+                public string street { get; set; }
+                public string zip { get; set; }
             }
         }
         

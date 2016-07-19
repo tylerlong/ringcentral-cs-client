@@ -28,10 +28,10 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public int? id;
-            public string contentUri;
-            public string contentType;
-            public int? duration;
+            public int? id { get; set; }
+            public string contentUri { get; set; }
+            public string contentType { get; set; }
+            public int? duration { get; set; }
         }
         
 

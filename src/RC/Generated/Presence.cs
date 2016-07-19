@@ -22,22 +22,22 @@ namespace RingCentral
         }
         public class GetResponse
         {
-            public string uri;
-            public bool? allowSeeMyPresence;
-            public string dndStatus;
-            public Extension extension;
-            public string message;
-            public bool? pickUpCallsOnHold;
-            public string presenceStatus;
-            public bool? ringOnMonitoredCall;
-            public string telephonyStatus;
-            public string userStatus;
+            public string uri { get; set; }
+            public bool? allowSeeMyPresence { get; set; }
+            public string dndStatus { get; set; }
+            public Extension extension { get; set; }
+            public string message { get; set; }
+            public bool? pickUpCallsOnHold { get; set; }
+            public string presenceStatus { get; set; }
+            public bool? ringOnMonitoredCall { get; set; }
+            public string telephonyStatus { get; set; }
+            public string userStatus { get; set; }
         
             public class Extension
             {
-                public string id;
-                public string uri;
-                public string extensionNumber;
+                public string id { get; set; }
+                public string uri { get; set; }
+                public string extensionNumber { get; set; }
             }
         }
         

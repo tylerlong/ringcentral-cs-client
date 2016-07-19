@@ -22,35 +22,35 @@ namespace RingCentral
         }
         public class GetQueryParams
         {
-            public string countryId;
+            public string countryId { get; set; }
         }
         public class GetResponse
         {
-            public string uri;
-            public bool? allowJoinBeforeHost;
-            public string hostCode;
-            public string mode;
-            public string participantCode;
-            public string phoneNumber;
-            public string tapToJoinUri;
-            public PhoneNumber[] phoneNumbers;
+            public string uri { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public string hostCode { get; set; }
+            public string mode { get; set; }
+            public string participantCode { get; set; }
+            public string phoneNumber { get; set; }
+            public string tapToJoinUri { get; set; }
+            public PhoneNumber[] phoneNumbers { get; set; }
         
             public class PhoneNumber
             {
-                public Country country;
-                public bool? @default;
-                public bool? hasGreeting;
-                public string location;
-                public string phoneNumber;
+                public Country country { get; set; }
+                public bool? @default { get; set; }
+                public bool? hasGreeting { get; set; }
+                public string location { get; set; }
+                public string phoneNumber { get; set; }
         
                 public class Country
                 {
-                    public string id;
-                    public string uri;
-                    public string callingCode;
-                    public bool? emergencyCalling;
-                    public string isoCode;
-                    public string name;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string callingCode { get; set; }
+                    public bool? emergencyCalling { get; set; }
+                    public string isoCode { get; set; }
+                    public string name { get; set; }
                 }
             }
         }
@@ -62,42 +62,42 @@ namespace RingCentral
         }
         public class PutRequest
         {
-            public PhoneNumber[] phoneNumbers;
-            public bool? allowJoinBeforeHost;
+            public PhoneNumber[] phoneNumbers { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
         
             public class PhoneNumber
             {
-                public string phoneNumber;
-                public bool? @default;
+                public string phoneNumber { get; set; }
+                public bool? @default { get; set; }
             }
         }
         public class PutResponse
         {
-            public string uri;
-            public bool? allowJoinBeforeHost;
-            public string hostCode;
-            public string mode;
-            public string participantCode;
-            public string phoneNumber;
-            public string tapToJoinUri;
-            public PhoneNumber[] phoneNumbers;
+            public string uri { get; set; }
+            public bool? allowJoinBeforeHost { get; set; }
+            public string hostCode { get; set; }
+            public string mode { get; set; }
+            public string participantCode { get; set; }
+            public string phoneNumber { get; set; }
+            public string tapToJoinUri { get; set; }
+            public PhoneNumber[] phoneNumbers { get; set; }
         
             public class PhoneNumber
             {
-                public Country country;
-                public bool? @default;
-                public bool? hasGreeting;
-                public string location;
-                public string phoneNumber;
+                public Country country { get; set; }
+                public bool? @default { get; set; }
+                public bool? hasGreeting { get; set; }
+                public string location { get; set; }
+                public string phoneNumber { get; set; }
         
                 public class Country
                 {
-                    public string id;
-                    public string uri;
-                    public string callingCode;
-                    public bool? emergencyCalling;
-                    public string isoCode;
-                    public string name;
+                    public string id { get; set; }
+                    public string uri { get; set; }
+                    public string callingCode { get; set; }
+                    public bool? emergencyCalling { get; set; }
+                    public string isoCode { get; set; }
+                    public string name { get; set; }
                 }
             }
         }
