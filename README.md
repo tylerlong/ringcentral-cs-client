@@ -89,11 +89,11 @@ var timezone = JsonConvert.DeserializeObject<Timezone.GetResponse>(json); // con
 
 ```cs
 var endpoint = rc.Restapi().Dictionary().Timezone("6").Endpoint();
-var timezone = rc.Get<Timezone.GetResponse>(endpoint);
+var timezone = rc.Get<Timezone.GetResponse>(endpoint).Result;
 ```
 
 ##### Most intuitive:
 
 ```cs
-var timezone = rc.Restapi().Dictionary().Timezone("6").Get(); // This is the shortest solution.
+var timezone = rc.Restapi().Dictionary().Timezone("6").Get().Result; // This is the shortest solution.
 ```
