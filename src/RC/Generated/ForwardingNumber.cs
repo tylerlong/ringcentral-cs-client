@@ -12,9 +12,13 @@ namespace RingCentral
                 return "forwarding-number";
             }
         }
-        public Task<PostResponse> Post(PostRequest requestBody)
+        public Task<PostResponse> Post(object requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
+        }
+        public Task<PostResponse> Post(PostRequest requestBody)
+        {
+            return Post(requestBody as object);
         }
         public class PostRequest
         {
@@ -30,9 +34,13 @@ namespace RingCentral
             public string features { get; set; }
             public int? flipNumber { get; set; }
         }
-        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        public Task<ListResponse> List(object queryParams)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
+        }
+        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        {
+            return List(queryParams as object);
         }
         public class ListQueryParams
         {

@@ -12,9 +12,13 @@ namespace RingCentral
                 return "call-log";
             }
         }
-        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        public Task<ListResponse> List(object queryParams)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
+        }
+        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        {
+            return List(queryParams as object);
         }
         public class ListQueryParams
         {
@@ -187,9 +191,13 @@ namespace RingCentral
                 public string contentUri { get; set; }
             }
         }
-        public Task<System.Net.Http.HttpResponseMessage> Delete(DeleteQueryParams queryParams = null)
+        public Task<System.Net.Http.HttpResponseMessage> Delete(object queryParams)
         {
             return RC.Delete(Endpoint(false), queryParams);
+        }
+        public Task<System.Net.Http.HttpResponseMessage> Delete(DeleteQueryParams queryParams = null)
+        {
+            return Delete(queryParams as object);
         }
         public class DeleteQueryParams
         {

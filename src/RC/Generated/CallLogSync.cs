@@ -12,9 +12,13 @@ namespace RingCentral
                 return "call-log-sync";
             }
         }
-        public Task<GetResponse> Get(GetQueryParams queryParams = null)
+        public Task<GetResponse> Get(object queryParams)
         {
             return RC.Get<GetResponse>(Endpoint(false), queryParams);
+        }
+        public Task<GetResponse> Get(GetQueryParams queryParams = null)
+        {
+            return Get(queryParams as object);
         }
         public class GetQueryParams
         {

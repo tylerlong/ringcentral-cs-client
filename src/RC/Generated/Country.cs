@@ -12,9 +12,13 @@ namespace RingCentral
                 return "country";
             }
         }
-        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        public Task<ListResponse> List(object queryParams)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
+        }
+        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        {
+            return List(queryParams as object);
         }
         public class ListQueryParams
         {

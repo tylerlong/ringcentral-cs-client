@@ -12,9 +12,13 @@ namespace RingCentral
                 return "contact";
             }
         }
-        public Task<PostResponse> Post(PostRequest requestBody)
+        public Task<PostResponse> Post(object requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
+        }
+        public Task<PostResponse> Post(PostRequest requestBody)
+        {
+            return Post(requestBody as object);
         }
         public class PostRequest
         {
@@ -130,9 +134,13 @@ namespace RingCentral
                 public string zip { get; set; }
             }
         }
-        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        public Task<ListResponse> List(object queryParams)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
+        }
+        public Task<ListResponse> List(ListQueryParams queryParams = null)
+        {
+            return List(queryParams as object);
         }
         public class ListQueryParams
         {
@@ -302,9 +310,13 @@ namespace RingCentral
                 public string zip { get; set; }
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody)
+        public Task<PutResponse> Put(object requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody)
+        {
+            return Put(requestBody as object);
         }
         public class PutRequest
         {

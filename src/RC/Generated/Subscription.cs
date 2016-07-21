@@ -12,9 +12,21 @@ namespace RingCentral
                 return "subscription";
             }
         }
-        public Task<PostResponse> Post(PostRequest requestBody, PostQueryParams queryParams = null)
+        public Task<PostResponse> Post(object requestBody, object queryParams)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, queryParams);
+        }
+        public Task<PostResponse> Post(PostRequest requestBody, object queryParams)
+        {
+            return Post(requestBody as object, queryParams);
+        }
+        public Task<PostResponse> Post(object requestBody, PostQueryParams queryParams = null)
+        {
+            return Post(requestBody, queryParams as object);
+        }
+        public Task<PostResponse> Post(PostRequest requestBody, PostQueryParams queryParams = null)
+        {
+            return Post(requestBody as object, queryParams as object);
         }
         public class PostQueryParams
         {
@@ -80,9 +92,21 @@ namespace RingCentral
                 public string encryptionKey { get; set; }
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody, PutQueryParams queryParams = null)
+        public Task<PutResponse> Put(object requestBody, object queryParams)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, queryParams);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody, object queryParams)
+        {
+            return Put(requestBody as object, queryParams);
+        }
+        public Task<PutResponse> Put(object requestBody, PutQueryParams queryParams = null)
+        {
+            return Put(requestBody, queryParams as object);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody, PutQueryParams queryParams = null)
+        {
+            return Put(requestBody as object, queryParams as object);
         }
         public class PutQueryParams
         {

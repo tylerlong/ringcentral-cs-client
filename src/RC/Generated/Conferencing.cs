@@ -12,9 +12,13 @@ namespace RingCentral
                 return "conferencing";
             }
         }
-        public Task<GetResponse> Get(GetQueryParams queryParams = null)
+        public Task<GetResponse> Get(object queryParams)
         {
             return RC.Get<GetResponse>(Endpoint(false), queryParams);
+        }
+        public Task<GetResponse> Get(GetQueryParams queryParams = null)
+        {
+            return Get(queryParams as object);
         }
         public class GetQueryParams
         {
@@ -48,9 +52,13 @@ namespace RingCentral
                 }
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody)
+        public Task<PutResponse> Put(object requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(false), requestBody, null);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody)
+        {
+            return Put(requestBody as object);
         }
         public class PutRequest
         {

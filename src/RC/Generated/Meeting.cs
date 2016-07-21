@@ -20,9 +20,13 @@ namespace RingCentral
         {
             return new End(this);
         }
-        public Task<PostResponse> Post(PostRequest requestBody)
+        public Task<PostResponse> Post(object requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
+        }
+        public Task<PostResponse> Post(PostRequest requestBody)
+        {
+            return Post(requestBody as object);
         }
         public class PostRequest
         {
@@ -186,9 +190,13 @@ namespace RingCentral
                 }
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody)
+        public Task<PutResponse> Put(object requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody)
+        {
+            return Put(requestBody as object);
         }
         public class PutRequest
         {

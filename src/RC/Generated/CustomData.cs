@@ -12,9 +12,13 @@ namespace RingCentral
                 return "custom-data";
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody)
+        public Task<PutResponse> Put(object requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody)
+        {
+            return Put(requestBody as object);
         }
         public class PutRequest
         {

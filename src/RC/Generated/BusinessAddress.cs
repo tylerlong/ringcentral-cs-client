@@ -31,9 +31,13 @@ namespace RingCentral
                 public string zip { get; set; }
             }
         }
-        public Task<PutResponse> Put(PutRequest requestBody)
+        public Task<PutResponse> Put(object requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(false), requestBody, null);
+        }
+        public Task<PutResponse> Put(PutRequest requestBody)
+        {
+            return Put(requestBody as object);
         }
         public class PutRequest
         {
