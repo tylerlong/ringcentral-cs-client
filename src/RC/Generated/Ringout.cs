@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Ringout : Model
     {
         internal Ringout(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "ringout";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -27,23 +23,19 @@ namespace RingCentral
             public CallerId callerId { get; set; }
             public bool? playPrompt { get; set; }
             public Country country { get; set; }
-        
             public class From
             {
                 public string phoneNumber { get; set; }
                 public string forwardingNumberId { get; set; }
             }
-        
             public class To
             {
                 public string phoneNumber { get; set; }
             }
-        
             public class CallerId
             {
                 public string phoneNumber { get; set; }
             }
-        
             public class Country
             {
                 public string id { get; set; }
@@ -53,7 +45,6 @@ namespace RingCentral
         {
             public string id { get; set; }
             public Status status { get; set; }
-        
             public class Status
             {
                 public string callStatus { get; set; }
@@ -61,15 +52,10 @@ namespace RingCentral
                 public string calleeStatus { get; set; }
             }
         }
-        
-
         public Task<System.Net.Http.HttpResponseMessage> Delete()
         {
             return RC.Delete(Endpoint(true), null);
         }
-        
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -78,7 +64,6 @@ namespace RingCentral
         {
             public string id { get; set; }
             public Status status { get; set; }
-        
             public class Status
             {
                 public string callStatus { get; set; }
@@ -86,7 +71,5 @@ namespace RingCentral
                 public string calleeStatus { get; set; }
             }
         }
-        
-
     }
 }

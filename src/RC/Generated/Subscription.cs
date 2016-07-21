@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Subscription : Model
     {
         internal Subscription(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "subscription";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody, PostQueryParams queryParams = null)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, queryParams);
@@ -28,7 +24,6 @@ namespace RingCentral
         {
             public string[] eventFilters { get; set; }
             public DeliveryMode deliveryMode { get; set; }
-        
             public class DeliveryMode
             {
                 public string transportType { get; set; }
@@ -45,7 +40,6 @@ namespace RingCentral
             public string status { get; set; }
             public string creationTime { get; set; }
             public DeliveryMode deliveryMode { get; set; }
-        
             public class DeliveryMode
             {
                 public string transportType { get; set; }
@@ -57,15 +51,10 @@ namespace RingCentral
                 public string encryptionKey { get; set; }
             }
         }
-        
-
         public Task<System.Net.Http.HttpResponseMessage> Delete()
         {
             return RC.Delete(Endpoint(true), null);
         }
-        
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -80,7 +69,6 @@ namespace RingCentral
             public string status { get; set; }
             public string creationTime { get; set; }
             public DeliveryMode deliveryMode { get; set; }
-        
             public class DeliveryMode
             {
                 public string transportType { get; set; }
@@ -92,8 +80,6 @@ namespace RingCentral
                 public string encryptionKey { get; set; }
             }
         }
-        
-
         public Task<PutResponse> Put(PutRequest requestBody, PutQueryParams queryParams = null)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, queryParams);
@@ -116,7 +102,6 @@ namespace RingCentral
             public string status { get; set; }
             public string creationTime { get; set; }
             public DeliveryMode deliveryMode { get; set; }
-        
             public class DeliveryMode
             {
                 public string transportType { get; set; }
@@ -128,7 +113,5 @@ namespace RingCentral
                 public string encryptionKey { get; set; }
             }
         }
-        
-
     }
 }

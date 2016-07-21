@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Meeting : Model
     {
         internal Meeting(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,20 +12,14 @@ namespace RingCentral
                 return "meeting";
             }
         }
-
         public ServiceInfo ServiceInfo()
         {
             return new ServiceInfo(this);
         }
-        
-
         public End End()
         {
             return new End(this);
         }
-        
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -42,13 +34,11 @@ namespace RingCentral
             public bool? startHostVideo { get; set; }
             public bool? startParticipantsVideo { get; set; }
             public string[] audioOptions { get; set; }
-        
             public class Schedule
             {
                 public string startTime { get; set; }
                 public int? durationInMinutes { get; set; }
                 public TimeZone timeZone { get; set; }
-        
                 public class TimeZone
                 {
                     public string id { get; set; }
@@ -69,27 +59,22 @@ namespace RingCentral
             public bool? startHostVideo { get; set; }
             public bool? startParticipantsVideo { get; set; }
             public string[] audioOptions { get; set; }
-        
             public class Links
             {
                 public string startUri { get; set; }
                 public string joinUri { get; set; }
             }
-        
             public class Schedule
             {
                 public string startTime { get; set; }
                 public int? durationInMinutes { get; set; }
                 public TimeZone timeZone { get; set; }
-        
                 public class TimeZone
                 {
                     public string id { get; set; }
                 }
             }
         }
-        
-
         public Task<ListResponse> List()
         {
             return RC.Get<ListResponse>(Endpoint(false), null);
@@ -100,7 +85,6 @@ namespace RingCentral
             public Record[] records { get; set; }
             public Paging paging { get; set; }
             public Navigation navigation { get; set; }
-        
             public class Record
             {
                 public string uri { get; set; }
@@ -115,26 +99,22 @@ namespace RingCentral
                 public bool? startHostVideo { get; set; }
                 public bool? startParticipantsVideo { get; set; }
                 public string[] audioOptions { get; set; }
-        
                 public class Links
                 {
                     public string startUri { get; set; }
                     public string joinUri { get; set; }
                 }
-        
                 public class Schedule
                 {
                     public string startTime { get; set; }
                     public int? durationInMinutes { get; set; }
                     public TimeZone timeZone { get; set; }
-        
                     public class TimeZone
                     {
                         public string id { get; set; }
                     }
                 }
             }
-        
             public class Paging
             {
                 public int? page { get; set; }
@@ -144,44 +124,34 @@ namespace RingCentral
                 public int? totalPages { get; set; }
                 public int? totalElements { get; set; }
             }
-        
             public class Navigation
             {
                 public FirstPage firstPage { get; set; }
                 public NextPage nextPage { get; set; }
                 public PreviousPage previousPage { get; set; }
                 public LastPage lastPage { get; set; }
-        
                 public class FirstPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class NextPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class PreviousPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class LastPage
                 {
                     public string uri { get; set; }
                 }
             }
         }
-        
-
         public Task<System.Net.Http.HttpResponseMessage> Delete()
         {
             return RC.Delete(Endpoint(true), null);
         }
-        
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -200,27 +170,22 @@ namespace RingCentral
             public bool? startHostVideo { get; set; }
             public bool? startParticipantsVideo { get; set; }
             public string[] audioOptions { get; set; }
-        
             public class Links
             {
                 public string startUri { get; set; }
                 public string joinUri { get; set; }
             }
-        
             public class Schedule
             {
                 public string startTime { get; set; }
                 public int? durationInMinutes { get; set; }
                 public TimeZone timeZone { get; set; }
-        
                 public class TimeZone
                 {
                     public string id { get; set; }
                 }
             }
         }
-        
-
         public Task<PutResponse> Put(PutRequest requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
@@ -235,13 +200,11 @@ namespace RingCentral
             public bool? startHostVideo { get; set; }
             public bool? startParticipantsVideo { get; set; }
             public string[] audioOptions { get; set; }
-        
             public class Schedule
             {
                 public string startTime { get; set; }
                 public int? durationInMinutes { get; set; }
                 public TimeZone timeZone { get; set; }
-        
                 public class TimeZone
                 {
                     public string id { get; set; }
@@ -262,26 +225,21 @@ namespace RingCentral
             public bool? startHostVideo { get; set; }
             public bool? startParticipantsVideo { get; set; }
             public string[] audioOptions { get; set; }
-        
             public class Links
             {
                 public string startUri { get; set; }
                 public string joinUri { get; set; }
             }
-        
             public class Schedule
             {
                 public string startTime { get; set; }
                 public int? durationInMinutes { get; set; }
                 public TimeZone timeZone { get; set; }
-        
                 public class TimeZone
                 {
                     public string id { get; set; }
                 }
             }
         }
-        
-
     }
 }

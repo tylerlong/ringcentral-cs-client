@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class CallLog : Model
     {
         internal CallLog(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "call-log";
             }
         }
-
-
         public Task<ListResponse> List(ListQueryParams queryParams = null)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
@@ -38,7 +34,6 @@ namespace RingCentral
             public Record[] records { get; set; }
             public Navigation navigation { get; set; }
             public Paging paging { get; set; }
-        
             public class Record
             {
                 public string id { get; set; }
@@ -56,7 +51,6 @@ namespace RingCentral
                 public string lastModifiedTime { get; set; }
                 public string transport { get; set; }
                 public Leg[] legs { get; set; }
-        
                 public class From
                 {
                     public string phoneNumber { get; set; }
@@ -64,7 +58,6 @@ namespace RingCentral
                     public string location { get; set; }
                     public string name { get; set; }
                 }
-        
                 public class To
                 {
                     public string phoneNumber { get; set; }
@@ -72,7 +65,6 @@ namespace RingCentral
                     public string location { get; set; }
                     public string name { get; set; }
                 }
-        
                 public class Recording
                 {
                     public int? id { get; set; }
@@ -80,7 +72,6 @@ namespace RingCentral
                     public string type { get; set; }
                     public string contentUri { get; set; }
                 }
-        
                 public class Leg
                 {
                     public string action { get; set; }
@@ -95,13 +86,11 @@ namespace RingCentral
                     public To to { get; set; }
                     public string transport { get; set; }
                     public Recording recording { get; set; }
-        
                     public class Extension
                     {
                         public int? id { get; set; }
                         public string uri { get; set; }
                     }
-        
                     public class From
                     {
                         public string phoneNumber { get; set; }
@@ -109,7 +98,6 @@ namespace RingCentral
                         public string location { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class To
                     {
                         public string phoneNumber { get; set; }
@@ -117,7 +105,6 @@ namespace RingCentral
                         public string location { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class Recording
                     {
                         public int? id { get; set; }
@@ -127,35 +114,29 @@ namespace RingCentral
                     }
                 }
             }
-        
             public class Navigation
             {
                 public FirstPage firstPage { get; set; }
                 public NextPage nextPage { get; set; }
                 public PreviousPage previousPage { get; set; }
                 public LastPage lastPage { get; set; }
-        
                 public class FirstPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class NextPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class PreviousPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class LastPage
                 {
                     public string uri { get; set; }
                 }
             }
-        
             public class Paging
             {
                 public int? page { get; set; }
@@ -166,8 +147,6 @@ namespace RingCentral
                 public int? totalElements { get; set; }
             }
         }
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -186,7 +165,6 @@ namespace RingCentral
             public string startTime { get; set; }
             public int? duration { get; set; }
             public Recording recording { get; set; }
-        
             public class From
             {
                 public string phoneNumber { get; set; }
@@ -194,7 +172,6 @@ namespace RingCentral
                 public string location { get; set; }
                 public string name { get; set; }
             }
-        
             public class To
             {
                 public string phoneNumber { get; set; }
@@ -202,7 +179,6 @@ namespace RingCentral
                 public string location { get; set; }
                 public string name { get; set; }
             }
-        
             public class Recording
             {
                 public int? id { get; set; }
@@ -211,8 +187,6 @@ namespace RingCentral
                 public string contentUri { get; set; }
             }
         }
-        
-
         public Task<System.Net.Http.HttpResponseMessage> Delete(DeleteQueryParams queryParams = null)
         {
             return RC.Delete(Endpoint(false), queryParams);
@@ -221,8 +195,5 @@ namespace RingCentral
         {
             public string dateTo { get; set; }
         }
-        
-        
-
     }
 }

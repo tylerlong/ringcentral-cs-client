@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Presence : Model
     {
         internal Presence(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "presence";
             }
         }
-
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(false), null);
@@ -32,7 +28,6 @@ namespace RingCentral
             public bool? ringOnMonitoredCall { get; set; }
             public string telephonyStatus { get; set; }
             public string userStatus { get; set; }
-        
             public class Extension
             {
                 public string id { get; set; }
@@ -40,7 +35,5 @@ namespace RingCentral
                 public string extensionNumber { get; set; }
             }
         }
-        
-
     }
 }

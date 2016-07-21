@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Account : Model
     {
         internal Account(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,68 +12,46 @@ namespace RingCentral
                 return "account";
             }
         }
-
         public ActiveCalls ActiveCalls()
         {
             return new ActiveCalls(this);
         }
-        
-
         public BusinessAddress BusinessAddress()
         {
             return new BusinessAddress(this);
         }
-        
-
         public CallLog CallLog(string _id = null)
         {
             return new CallLog(this, _id);
         }
-        
-
         public Department Department(string _id = null)
         {
             return new Department(this, _id);
         }
-        
-
         public Device Device(string _id = null)
         {
             return new Device(this, _id);
         }
-        
-
         public Extension Extension(string _id = "~")
         {
             return new Extension(this, _id);
         }
-        
-
         public Order Order(string _id = null)
         {
             return new Order(this, _id);
         }
-        
-
         public PhoneNumber PhoneNumber(string _id = null)
         {
             return new PhoneNumber(this, _id);
         }
-        
-
         public Recording Recording(string _id = null)
         {
             return new Recording(this, _id);
         }
-        
-
         public ServiceInfo ServiceInfo()
         {
             return new ServiceInfo(this);
         }
-        
-
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -91,7 +67,6 @@ namespace RingCentral
             public string setupWizardState { get; set; }
             public string status { get; set; }
             public StatusInfo statusInfo { get; set; }
-        
             public class Operator
             {
                 public string id { get; set; }
@@ -110,7 +85,6 @@ namespace RingCentral
                 public string status { get; set; }
                 public StatusInfo statusInfo { get; set; }
                 public string type { get; set; }
-        
                 public class Contact
                 {
                     public string firstName { get; set; }
@@ -119,7 +93,6 @@ namespace RingCentral
                     public string email { get; set; }
                     public string businessPhone { get; set; }
                     public BusinessAddress businessAddress { get; set; }
-        
                     public class BusinessAddress
                     {
                         public string country { get; set; }
@@ -129,30 +102,25 @@ namespace RingCentral
                         public string zip { get; set; }
                     }
                 }
-        
                 public class Departments
                 {
                     public string id { get; set; }
                     public string uri { get; set; }
                     public string extensionNumber { get; set; }
                 }
-        
                 public class Permissions
                 {
                     public Admin admin { get; set; }
                     public InternationalCalling internationalCalling { get; set; }
-        
                     public class Admin
                     {
                         public bool? enabled { get; set; }
                     }
-        
                     public class InternationalCalling
                     {
                         public bool? enabled { get; set; }
                     }
                 }
-        
                 public class ProfileImage
                 {
                     public string uri { get; set; }
@@ -161,13 +129,11 @@ namespace RingCentral
                     public string contentType { get; set; }
                     public string[] scales { get; set; }
                 }
-        
                 public class Reference
                 {
                     public string @ref { get; set; }
                     public string type { get; set; }
                 }
-        
                 public class RegionalSettings
                 {
                     public HomeCountry homeCountry { get; set; }
@@ -175,14 +141,12 @@ namespace RingCentral
                     public Language language { get; set; }
                     public GreetingLanguage greetingLanguage { get; set; }
                     public FormattingLocale formattingLocale { get; set; }
-        
                     public class HomeCountry
                     {
                         public string id { get; set; }
                         public string uri { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class Timezone
                     {
                         public string id { get; set; }
@@ -190,7 +154,6 @@ namespace RingCentral
                         public string name { get; set; }
                         public string description { get; set; }
                     }
-        
                     public class Language
                     {
                         public string id { get; set; }
@@ -201,14 +164,12 @@ namespace RingCentral
                         public string name { get; set; }
                         public bool? ui { get; set; }
                     }
-        
                     public class GreetingLanguage
                     {
                         public string id { get; set; }
                         public string localeCode { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class FormattingLocale
                     {
                         public string id { get; set; }
@@ -216,21 +177,18 @@ namespace RingCentral
                         public string name { get; set; }
                     }
                 }
-        
                 public class ServiceFeature
                 {
                     public bool? enabled { get; set; }
                     public string featureName { get; set; }
                     public string reason { get; set; }
                 }
-        
                 public class StatusInfo
                 {
                     public string comment { get; set; }
                     public string reason { get; set; }
                 }
             }
-        
             public class ServiceInfo
             {
                 public string uri { get; set; }
@@ -238,7 +196,6 @@ namespace RingCentral
                 public Brand brand { get; set; }
                 public ServicePlan servicePlan { get; set; }
                 public TargetServicePlan targetServicePlan { get; set; }
-        
                 public class BillingPlan
                 {
                     public string id { get; set; }
@@ -247,13 +204,11 @@ namespace RingCentral
                     public string duration { get; set; }
                     public string type { get; set; }
                 }
-        
                 public class Brand
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                     public HomeCountry homeCountry { get; set; }
-        
                     public class HomeCountry
                     {
                         public string id { get; set; }
@@ -261,28 +216,23 @@ namespace RingCentral
                         public string name { get; set; }
                     }
                 }
-        
                 public class ServicePlan
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                     public string edition { get; set; }
                 }
-        
                 public class TargetServicePlan
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                 }
             }
-        
             public class StatusInfo
             {
                 public string comment { get; set; }
                 public string reason { get; set; }
             }
         }
-        
-
     }
 }

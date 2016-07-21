@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class AddressBookSync : Model
     {
         internal AddressBookSync(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "address-book-sync";
             }
         }
-
-
         public Task<GetResponse> Get(GetQueryParams queryParams = null)
         {
             return RC.Get<GetResponse>(Endpoint(false), queryParams);
@@ -33,7 +29,6 @@ namespace RingCentral
             public SyncInfo syncInfo { get; set; }
             public int? nextPageId { get; set; }
             public string nextPageUri { get; set; }
-        
             public class Record
             {
                 public int? id { get; set; }
@@ -66,7 +61,6 @@ namespace RingCentral
                 public string birthday { get; set; }
                 public string webPage { get; set; }
                 public string notes { get; set; }
-        
                 public class HomeAddress
                 {
                     public string country { get; set; }
@@ -75,7 +69,6 @@ namespace RingCentral
                     public string street { get; set; }
                     public string zip { get; set; }
                 }
-        
                 public class BusinessAddress
                 {
                     public string country { get; set; }
@@ -84,7 +77,6 @@ namespace RingCentral
                     public string street { get; set; }
                     public string zip { get; set; }
                 }
-        
                 public class OtherAddress
                 {
                     public string country { get; set; }
@@ -94,7 +86,6 @@ namespace RingCentral
                     public string zip { get; set; }
                 }
             }
-        
             public class SyncInfo
             {
                 public string syncType { get; set; }
@@ -102,7 +93,5 @@ namespace RingCentral
                 public string syncTime { get; set; }
             }
         }
-        
-
     }
 }

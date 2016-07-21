@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Parse : Model
     {
         internal Parse(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "parse";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody, PostQueryParams queryParams = null)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, queryParams);
@@ -43,7 +39,6 @@ namespace RingCentral
             public bool? special { get; set; }
             public string normalized { get; set; }
             public Country[] country { get; set; }
-        
             public class HomeCountry
             {
                 public string id { get; set; }
@@ -53,7 +48,6 @@ namespace RingCentral
                 public string isoCode { get; set; }
                 public string name { get; set; }
             }
-        
             public class PhoneNumber
             {
                 public string areaCode { get; set; }
@@ -65,7 +59,6 @@ namespace RingCentral
                 public string originalString { get; set; }
                 public bool? special { get; set; }
                 public string normalized { get; set; }
-        
                 public class Country
                 {
                     public string id { get; set; }
@@ -76,7 +69,6 @@ namespace RingCentral
                     public string name { get; set; }
                 }
             }
-        
             public class Country
             {
                 public string id { get; set; }
@@ -87,7 +79,5 @@ namespace RingCentral
                 public string name { get; set; }
             }
         }
-        
-
     }
 }

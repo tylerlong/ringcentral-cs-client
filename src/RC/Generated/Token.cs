@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Token : Model
     {
         internal Token(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "token";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -42,7 +38,5 @@ namespace RingCentral
             public string owner_id { get; set; }
             public string endpoint_id { get; set; }
         }
-        
-
     }
 }

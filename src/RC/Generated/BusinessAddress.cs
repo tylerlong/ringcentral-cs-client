@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class BusinessAddress : Model
     {
         internal BusinessAddress(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "business-address";
             }
         }
-
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(false), null);
@@ -26,7 +22,6 @@ namespace RingCentral
             public string company { get; set; }
             public string email { get; set; }
             public BusinessAddress businessAddress { get; set; }
-        
             public class BusinessAddress
             {
                 public string country { get; set; }
@@ -36,8 +31,6 @@ namespace RingCentral
                 public string zip { get; set; }
             }
         }
-        
-
         public Task<PutResponse> Put(PutRequest requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(false), requestBody, null);
@@ -47,7 +40,6 @@ namespace RingCentral
             public string company { get; set; }
             public string email { get; set; }
             public BusinessAddress businessAddress { get; set; }
-        
             public class BusinessAddress
             {
                 public string country { get; set; }
@@ -63,7 +55,6 @@ namespace RingCentral
             public string company { get; set; }
             public string email { get; set; }
             public BusinessAddress businessAddress { get; set; }
-        
             public class BusinessAddress
             {
                 public string country { get; set; }
@@ -73,7 +64,5 @@ namespace RingCentral
                 public string zip { get; set; }
             }
         }
-        
-
     }
 }

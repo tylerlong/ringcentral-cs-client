@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class CustomData : Model
     {
         internal CustomData(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "custom-data";
             }
         }
-
-
         public Task<PutResponse> Put(PutRequest requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
@@ -32,14 +28,11 @@ namespace RingCentral
             public string value { get; set; }
             public string lastModifiedTime { get; set; }
             public Attachment attachment { get; set; }
-        
             public class Attachment
             {
                 public string uri { get; set; }
                 public string contentType { get; set; }
             }
         }
-        
-
     }
 }

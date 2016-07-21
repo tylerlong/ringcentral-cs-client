@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Authorize : Model
     {
         internal Authorize(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "authorize";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -33,7 +29,5 @@ namespace RingCentral
             public int? expires_in { get; set; }
             public string state { get; set; }
         }
-        
-
     }
 }

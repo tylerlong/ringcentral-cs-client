@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class CompanyPager : Model
     {
         internal CompanyPager(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "company-pager";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -26,7 +22,6 @@ namespace RingCentral
             public int? replyOn { get; set; }
             public string text { get; set; }
             public To[] to { get; set; }
-        
             public class From
             {
                 public string phoneNumber { get; set; }
@@ -34,7 +29,6 @@ namespace RingCentral
                 public string location { get; set; }
                 public string name { get; set; }
             }
-        
             public class To
             {
                 public string phoneNumber { get; set; }
@@ -67,7 +61,6 @@ namespace RingCentral
             public To[] to { get; set; }
             public string type { get; set; }
             public string vmTranscriptionStatus { get; set; }
-        
             public class Attachment
             {
                 public string id { get; set; }
@@ -76,7 +69,6 @@ namespace RingCentral
                 public string contentType { get; set; }
                 public int? vmDuration { get; set; }
             }
-        
             public class From
             {
                 public string extensionNumber { get; set; }
@@ -86,7 +78,6 @@ namespace RingCentral
                 public string name { get; set; }
                 public string phoneNumber { get; set; }
             }
-        
             public class To
             {
                 public string extensionNumber { get; set; }
@@ -97,7 +88,5 @@ namespace RingCentral
                 public string phoneNumber { get; set; }
             }
         }
-        
-
     }
 }

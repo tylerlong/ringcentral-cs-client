@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Conferencing : Model
     {
         internal Conferencing(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "conferencing";
             }
         }
-
-
         public Task<GetResponse> Get(GetQueryParams queryParams = null)
         {
             return RC.Get<GetResponse>(Endpoint(false), queryParams);
@@ -34,7 +30,6 @@ namespace RingCentral
             public string phoneNumber { get; set; }
             public string tapToJoinUri { get; set; }
             public PhoneNumber[] phoneNumbers { get; set; }
-        
             public class PhoneNumber
             {
                 public Country country { get; set; }
@@ -42,7 +37,6 @@ namespace RingCentral
                 public bool? hasGreeting { get; set; }
                 public string location { get; set; }
                 public string phoneNumber { get; set; }
-        
                 public class Country
                 {
                     public string id { get; set; }
@@ -54,8 +48,6 @@ namespace RingCentral
                 }
             }
         }
-        
-
         public Task<PutResponse> Put(PutRequest requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(false), requestBody, null);
@@ -64,7 +56,6 @@ namespace RingCentral
         {
             public PhoneNumber[] phoneNumbers { get; set; }
             public bool? allowJoinBeforeHost { get; set; }
-        
             public class PhoneNumber
             {
                 public string phoneNumber { get; set; }
@@ -81,7 +72,6 @@ namespace RingCentral
             public string phoneNumber { get; set; }
             public string tapToJoinUri { get; set; }
             public PhoneNumber[] phoneNumbers { get; set; }
-        
             public class PhoneNumber
             {
                 public Country country { get; set; }
@@ -89,7 +79,6 @@ namespace RingCentral
                 public bool? hasGreeting { get; set; }
                 public string location { get; set; }
                 public string phoneNumber { get; set; }
-        
                 public class Country
                 {
                     public string id { get; set; }
@@ -101,7 +90,5 @@ namespace RingCentral
                 }
             }
         }
-        
-
     }
 }

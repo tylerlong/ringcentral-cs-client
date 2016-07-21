@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Reserve : Model
     {
         internal Reserve(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "reserve";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -23,7 +19,6 @@ namespace RingCentral
         public class PostRequest
         {
             public Record[] records { get; set; }
-        
             public class Record
             {
                 public string phoneNumber { get; set; }
@@ -33,7 +28,6 @@ namespace RingCentral
         public class PostResponse
         {
             public Record[] records { get; set; }
-        
             public class Record
             {
                 public string phoneNumber { get; set; }
@@ -44,7 +38,5 @@ namespace RingCentral
                 public string error { get; set; }
             }
         }
-        
-
     }
 }

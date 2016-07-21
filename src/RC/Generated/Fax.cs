@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Fax : Model
     {
         internal Fax(Model parent) : base(parent, null) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "fax";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -28,7 +24,6 @@ namespace RingCentral
             public int? coverIndex { get; set; }
             public string coverPageText { get; set; }
             public string originalMessageId { get; set; }
-        
             public class To
             {
                 public string phoneNumber { get; set; }
@@ -61,7 +56,6 @@ namespace RingCentral
             public To[] to { get; set; }
             public string type { get; set; }
             public string vmTranscriptionStatus { get; set; }
-        
             public class Attachment
             {
                 public string id { get; set; }
@@ -70,7 +64,6 @@ namespace RingCentral
                 public string contentType { get; set; }
                 public int? vmDuration { get; set; }
             }
-        
             public class From
             {
                 public string extensionNumber { get; set; }
@@ -80,7 +73,6 @@ namespace RingCentral
                 public string name { get; set; }
                 public string phoneNumber { get; set; }
             }
-        
             public class To
             {
                 public string extensionNumber { get; set; }
@@ -91,7 +83,5 @@ namespace RingCentral
                 public string phoneNumber { get; set; }
             }
         }
-        
-
     }
 }

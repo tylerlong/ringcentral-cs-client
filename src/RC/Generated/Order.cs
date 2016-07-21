@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class Order : Model
     {
         internal Order(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,8 +12,6 @@ namespace RingCentral
                 return "order";
             }
         }
-
-
         public Task<PostResponse> Post(PostRequest requestBody)
         {
             return RC.Post<PostResponse>(Endpoint(false), requestBody, null);
@@ -23,7 +19,6 @@ namespace RingCentral
         public class PostRequest
         {
             public Device[] devices { get; set; }
-        
             public class Device
             {
                 public string id { get; set; }
@@ -39,20 +34,17 @@ namespace RingCentral
                 public PhoneLines phoneLines { get; set; }
                 public Shipping shipping { get; set; }
                 public int? boxBillingId { get; set; }
-        
                 public class Model
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                     public Addon[] addons { get; set; }
-        
                     public class Addon
                     {
                         public string id { get; set; }
                         public int? count { get; set; }
                     }
                 }
-        
                 public class Extension
                 {
                     public string id { get; set; }
@@ -60,7 +52,6 @@ namespace RingCentral
                     public string extensionNumber { get; set; }
                     public string partnerId { get; set; }
                 }
-        
                 public class EmergencyServiceAddress
                 {
                     public string customerName { get; set; }
@@ -71,12 +62,10 @@ namespace RingCentral
                     public string zip { get; set; }
                     public string country { get; set; }
                 }
-        
                 public class PhoneLines
                 {
                     public string lineType { get; set; }
                     public PhoneInfo phoneInfo { get; set; }
-        
                     public class PhoneInfo
                     {
                         public int? id { get; set; }
@@ -87,7 +76,6 @@ namespace RingCentral
                         public string status { get; set; }
                         public string type { get; set; }
                         public string usageType { get; set; }
-        
                         public class Country
                         {
                             public string id { get; set; }
@@ -96,7 +84,6 @@ namespace RingCentral
                         }
                     }
                 }
-        
                 public class Shipping
                 {
                     public string status { get; set; }
@@ -104,13 +91,11 @@ namespace RingCentral
                     public string trackingNumber { get; set; }
                     public Method[] method { get; set; }
                     public Address[] address { get; set; }
-        
                     public class Method
                     {
                         public string id { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class Address
                     {
                         public string customerName { get; set; }
@@ -127,7 +112,6 @@ namespace RingCentral
         public class PostResponse
         {
             public Device[] devices { get; set; }
-        
             public class Device
             {
                 public string id { get; set; }
@@ -143,20 +127,17 @@ namespace RingCentral
                 public PhoneLines phoneLines { get; set; }
                 public Shipping shipping { get; set; }
                 public int? boxBillingId { get; set; }
-        
                 public class Model
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                     public Addon[] addons { get; set; }
-        
                     public class Addon
                     {
                         public string id { get; set; }
                         public int? count { get; set; }
                     }
                 }
-        
                 public class Extension
                 {
                     public string id { get; set; }
@@ -164,7 +145,6 @@ namespace RingCentral
                     public string extensionNumber { get; set; }
                     public string partnerId { get; set; }
                 }
-        
                 public class EmergencyServiceAddress
                 {
                     public string customerName { get; set; }
@@ -175,12 +155,10 @@ namespace RingCentral
                     public string zip { get; set; }
                     public string country { get; set; }
                 }
-        
                 public class PhoneLines
                 {
                     public string lineType { get; set; }
                     public PhoneInfo phoneInfo { get; set; }
-        
                     public class PhoneInfo
                     {
                         public int? id { get; set; }
@@ -191,7 +169,6 @@ namespace RingCentral
                         public string status { get; set; }
                         public string type { get; set; }
                         public string usageType { get; set; }
-        
                         public class Country
                         {
                             public string id { get; set; }
@@ -200,7 +177,6 @@ namespace RingCentral
                         }
                     }
                 }
-        
                 public class Shipping
                 {
                     public string status { get; set; }
@@ -208,13 +184,11 @@ namespace RingCentral
                     public string trackingNumber { get; set; }
                     public Method[] method { get; set; }
                     public Address[] address { get; set; }
-        
                     public class Method
                     {
                         public string id { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class Address
                     {
                         public string customerName { get; set; }
@@ -228,8 +202,6 @@ namespace RingCentral
                 }
             }
         }
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -239,7 +211,6 @@ namespace RingCentral
             public string id { get; set; }
             public string uri { get; set; }
             public Device[] devices { get; set; }
-        
             public class Device
             {
                 public string id { get; set; }
@@ -255,20 +226,17 @@ namespace RingCentral
                 public PhoneLines phoneLines { get; set; }
                 public Shipping shipping { get; set; }
                 public int? boxBillingId { get; set; }
-        
                 public class Model
                 {
                     public string id { get; set; }
                     public string name { get; set; }
                     public Addon[] addons { get; set; }
-        
                     public class Addon
                     {
                         public string id { get; set; }
                         public int? count { get; set; }
                     }
                 }
-        
                 public class Extension
                 {
                     public string id { get; set; }
@@ -276,7 +244,6 @@ namespace RingCentral
                     public string extensionNumber { get; set; }
                     public string partnerId { get; set; }
                 }
-        
                 public class EmergencyServiceAddress
                 {
                     public string customerName { get; set; }
@@ -287,12 +254,10 @@ namespace RingCentral
                     public string zip { get; set; }
                     public string country { get; set; }
                 }
-        
                 public class PhoneLines
                 {
                     public string lineType { get; set; }
                     public PhoneInfo phoneInfo { get; set; }
-        
                     public class PhoneInfo
                     {
                         public int? id { get; set; }
@@ -303,7 +268,6 @@ namespace RingCentral
                         public string status { get; set; }
                         public string type { get; set; }
                         public string usageType { get; set; }
-        
                         public class Country
                         {
                             public string id { get; set; }
@@ -312,7 +276,6 @@ namespace RingCentral
                         }
                     }
                 }
-        
                 public class Shipping
                 {
                     public string status { get; set; }
@@ -320,13 +283,11 @@ namespace RingCentral
                     public string trackingNumber { get; set; }
                     public Method[] method { get; set; }
                     public Address[] address { get; set; }
-        
                     public class Method
                     {
                         public string id { get; set; }
                         public string name { get; set; }
                     }
-        
                     public class Address
                     {
                         public string customerName { get; set; }
@@ -340,7 +301,5 @@ namespace RingCentral
                 }
             }
         }
-        
-
     }
 }

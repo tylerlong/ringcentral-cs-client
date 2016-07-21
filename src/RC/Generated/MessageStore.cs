@@ -1,12 +1,10 @@
-using System.Threading.Tasks;
 
+using System.Threading.Tasks;
 namespace RingCentral
 {
     public partial class MessageStore : Model
     {
         internal MessageStore(Model parent, string _id = null) : base(parent, _id) { }
-
-
         protected override string PathSegment
         {
             get
@@ -14,14 +12,10 @@ namespace RingCentral
                 return "message-store";
             }
         }
-
         public Content Content(string _id = null)
         {
             return new Content(this, _id);
         }
-        
-
-
         public Task<ListResponse> List(ListQueryParams queryParams = null)
         {
             return RC.Get<ListResponse>(Endpoint(false), queryParams);
@@ -45,7 +39,6 @@ namespace RingCentral
             public Record[] records { get; set; }
             public Navigation navigation { get; set; }
             public Paging paging { get; set; }
-        
             public class Record
             {
                 public string id { get; set; }
@@ -70,7 +63,6 @@ namespace RingCentral
                 public To[] to { get; set; }
                 public string type { get; set; }
                 public string vmTranscriptionStatus { get; set; }
-        
                 public class Attachment
                 {
                     public string id { get; set; }
@@ -79,7 +71,6 @@ namespace RingCentral
                     public string contentType { get; set; }
                     public int? vmDuration { get; set; }
                 }
-        
                 public class From
                 {
                     public string extensionNumber { get; set; }
@@ -89,7 +80,6 @@ namespace RingCentral
                     public string name { get; set; }
                     public string phoneNumber { get; set; }
                 }
-        
                 public class To
                 {
                     public string extensionNumber { get; set; }
@@ -100,35 +90,29 @@ namespace RingCentral
                     public string phoneNumber { get; set; }
                 }
             }
-        
             public class Navigation
             {
                 public FirstPage firstPage { get; set; }
                 public NextPage nextPage { get; set; }
                 public PreviousPage previousPage { get; set; }
                 public LastPage lastPage { get; set; }
-        
                 public class FirstPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class NextPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class PreviousPage
                 {
                     public string uri { get; set; }
                 }
-        
                 public class LastPage
                 {
                     public string uri { get; set; }
                 }
             }
-        
             public class Paging
             {
                 public int? page { get; set; }
@@ -139,8 +123,6 @@ namespace RingCentral
                 public int? totalElements { get; set; }
             }
         }
-        
-
         public Task<System.Net.Http.HttpResponseMessage> Delete(DeleteQueryParams queryParams = null)
         {
             return RC.Delete(Endpoint(true), queryParams);
@@ -150,9 +132,6 @@ namespace RingCentral
             public bool? purge { get; set; }
             public int? conversationId { get; set; }
         }
-        
-        
-
         public Task<GetResponse> Get()
         {
             return RC.Get<GetResponse>(Endpoint(true), null);
@@ -181,7 +160,6 @@ namespace RingCentral
             public To[] to { get; set; }
             public string type { get; set; }
             public string vmTranscriptionStatus { get; set; }
-        
             public class Attachment
             {
                 public string id { get; set; }
@@ -190,7 +168,6 @@ namespace RingCentral
                 public string contentType { get; set; }
                 public int? vmDuration { get; set; }
             }
-        
             public class From
             {
                 public string extensionNumber { get; set; }
@@ -200,7 +177,6 @@ namespace RingCentral
                 public string name { get; set; }
                 public string phoneNumber { get; set; }
             }
-        
             public class To
             {
                 public string extensionNumber { get; set; }
@@ -211,8 +187,6 @@ namespace RingCentral
                 public string phoneNumber { get; set; }
             }
         }
-        
-
         public Task<PutResponse> Put(PutRequest requestBody)
         {
             return RC.Put<PutResponse>(Endpoint(true), requestBody, null);
@@ -245,7 +219,6 @@ namespace RingCentral
             public To[] to { get; set; }
             public string type { get; set; }
             public string vmTranscriptionStatus { get; set; }
-        
             public class Attachment
             {
                 public string id { get; set; }
@@ -254,7 +227,6 @@ namespace RingCentral
                 public string contentType { get; set; }
                 public int? vmDuration { get; set; }
             }
-        
             public class From
             {
                 public string extensionNumber { get; set; }
@@ -264,7 +236,6 @@ namespace RingCentral
                 public string name { get; set; }
                 public string phoneNumber { get; set; }
             }
-        
             public class To
             {
                 public string extensionNumber { get; set; }
@@ -275,7 +246,5 @@ namespace RingCentral
                 public string phoneNumber { get; set; }
             }
         }
-        
-
     }
 }
