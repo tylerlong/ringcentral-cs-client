@@ -26,8 +26,8 @@ namespace RingCentral
 
 
         private bool refreshScheduled = false;
-        private Token _token;
-        public Token token
+        private Token.PostResponse _token;
+        public Token.PostResponse token
         {
             get
             {
@@ -68,7 +68,7 @@ namespace RingCentral
                 password = password,
                 grant_type = "password"
             };
-            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
+            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token.PostResponse>().Result;
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace RingCentral
                 refresh_token = token.refresh_token,
                 endpoint_id = token.endpoint_id
             };
-            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
+            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token.PostResponse>().Result;
         }
 
 
@@ -124,7 +124,7 @@ namespace RingCentral
                 redirect_uri = redirectUri,
                 code = authCode
             };
-            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token>().Result;
+            token = client.PostUrlEncodedAsync(requestBody).ReceiveJson<Token.PostResponse>().Result;
         }
 
         /// <summary>
